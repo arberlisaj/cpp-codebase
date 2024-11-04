@@ -1,0 +1,8 @@
+# i use neovim btw
+/build/
+.cache
+
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
