@@ -1,3 +1,4 @@
+#include <cmath>
 #include <iostream>
 
 using namespace std;
@@ -153,6 +154,29 @@ int ex08() {
 
 // ============================================================================
 
+int ex09() {
+  const double vellimiKutise = 3.78;
+  const double kostoPerLiter = 38.0;
+  const double fitimiPerKuti = 27.0;
+
+  double sasiaDitoreQumeshtit;
+  cout << "Sasia ditore e qumeshtit (Liter): ";
+  cin >> sasiaDitoreQumeshtit;
+
+  int numriKutive = ceil(sasiaDitoreQumeshtit / vellimiKutise);
+  double kostojaProdhimit = sasiaDitoreQumeshtit * kostoPerLiter;
+  double fitimiTotal = numriKutive * fitimiPerKuti;
+
+  cout << "Sasia e prodhuar: " << sasiaDitoreQumeshtit << " Liter." << endl
+       << "Numri i kutive te nevojshme: " << numriKutive << " Kuti." << endl
+       << "Kosto e prodhimit: " << kostojaProdhimit << " Leke." << endl
+       << "Fitimi per prodhimin: " << fitimiTotal << " Leke." << endl;
+
+  return 0;
+}
+
+// ============================================================================
+
 int ex10() {
   float gjatesiaTelit, gjeresiaKornizes, gjatesiaKornizes;
 
@@ -171,7 +195,8 @@ int ex10() {
 
 // ============================================================================
 
+// call out my name babe (main obv).
 int main() {
-  ex01();
+  ex09();
   return 0;
 }
