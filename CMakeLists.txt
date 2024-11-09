@@ -13,7 +13,7 @@ include_directories(include)
 # Add source files
 set(SOURCES
     src/main.cpp
-    src/sayHello.cpp
+    src/pune_laboratori_nr2.cpp
 )
 
 # Create the executable
