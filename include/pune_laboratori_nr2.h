@@ -1,15 +1,15 @@
 #ifndef PUNE_LABORATORI_NR2_H
 #define PUNE_LABORATORI_NR2_H
 
-void ex01();
-void ex02();
-void ex03();
-void ex04();
-void ex05();
-void ex06();
-void ex07();
-void ex08();
-void ex09();
-void ex10();
+int ex01();
+int ex02();
+int ex03();
+int ex04();
+int ex05();
+int ex06();
+int ex07();
+int ex08();
+int ex09();
+int ex10();
 
 #endif

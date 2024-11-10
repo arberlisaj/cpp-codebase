@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void ex01() {
+int ex01() {
   cout << R"(
 ***********************************************
 * Pune Laboratorike Nr.2                      *
@@ -13,9 +13,10 @@ void ex01() {
 * Data: 08.11.2024                            *
 ***********************************************
 )";
+  return 0;
 }
 
-void ex02() {
+int ex02() {
   cout << R"(
 CCCCCCCCC         ++              ++
 CC                ++              ++
@@ -24,9 +25,10 @@ CC     	    ++++++++++++++  ++++++++++++++
 CC                ++              ++
 CCCCCCCCC         ++              ++
 )";
+  return 0;
 }
 
-void ex03() {
+int ex03() {
   int num1, num2, num3;
   float mesatarja;
   num1 = 128;
@@ -38,9 +40,10 @@ void ex03() {
        << "Numri 2 = " << num2 << endl
        << "Numri 3 = " << num3 << endl
        << "Mesatarja = " << mesatarja << endl;
+  return 0;
 }
 
-void ex04() {
+int ex04() {
   double num1, num2, num3, average;
 
   num1 = 75.35;
@@ -52,9 +55,10 @@ void ex04() {
        << "Numri 2 = " << num2 << endl
        << "Numri 3 = " << num3 << endl
        << "Mesatarja = " << average << endl;
+  return 0;
 }
 
-void ex05() {
+int ex05() {
   float rrezja, siperfaqja, perimetri;
   const float PI = 3.14;
 
@@ -66,9 +70,10 @@ void ex05() {
 
   cout << "Siperfaqja: " << siperfaqja << endl;
   cout << "Perimetri: " << perimetri << endl;
+  return 0;
 }
 
-void ex06() {
+int ex06() {
   double r1, r2, siperfaqja;
   const double PI = 3.14;
 
@@ -81,11 +86,12 @@ void ex06() {
   siperfaqja = PI * r1 * r2;
 
   cout << "Siperfaqja: " << siperfaqja << endl;
+  return 0;
 }
 
 #include <iostream>
 
-void ex07() {
+int ex07() {
   int userInput, oret, minutat, sekondat;
 
   cout << "Koha e kaluar (sekonda): ";
@@ -100,9 +106,10 @@ void ex07() {
   cout << "Oret: " << oret << endl;
   cout << "Minutat: " << minutat << endl;
   cout << "Sekondat: " << sekondat << endl;
+  return 0;
 }
 
-void ex08() {
+int ex08() {
   float cmimiOrigjinal, perqindjaFitimit, perqindjaTatimit, fitimi, cmimiFinal,
       tvsh;
 
@@ -125,9 +132,10 @@ void ex08() {
        << "Fitimi: " << fitimi << endl
        << "Vlera e TVSH: " << tvsh << endl
        << "Cmimi final: " << cmimiFinal << endl;
+  return 0;
 }
 
-void ex09() {
+int ex09() {
   const double vellimiKutise = 3.78;
   const double kostoPerLiter = 38.0;
   const double fitimiPerKuti = 27.0;
@@ -144,9 +152,10 @@ void ex09() {
        << "Numri i kutive te nevojshme: " << numriKutive << " Kuti." << endl
        << "Kosto e prodhimit: " << kostojaProdhimit << " Leke." << endl
        << "Fitimi per prodhimin: " << fitimiTotal << " Leke." << endl;
+  return 0;
 }
 
-void ex10() {
+int ex10() {
   float gjatesiaTelit, gjeresiaKornizes, gjatesiaKornizes;
 
   cout << "Jep gjatesine e telit: ";
@@ -158,4 +167,5 @@ void ex10() {
 
   cout << "Gjeresia e kornizes: " << gjeresiaKornizes << endl
        << "Gjatesia e kornizes: " << gjatesiaKornizes << endl;
+  return 0;
 }
