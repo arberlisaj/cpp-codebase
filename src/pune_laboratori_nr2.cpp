@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int ex01() {
+int p2ex01() {
   cout << R"(
 ***********************************************
 * Pune Laboratorike Nr.2                      *
@@ -16,7 +16,7 @@ int ex01() {
   return 0;
 }
 
-int ex02() {
+int p2ex02() {
   cout << R"(
 CCCCCCCCC         ++              ++
 CC                ++              ++
@@ -28,7 +28,7 @@ CCCCCCCCC         ++              ++
   return 0;
 }
 
-int ex03() {
+int p2ex03() {
   int num1, num2, num3;
   float mesatarja;
   num1 = 128;
@@ -43,7 +43,7 @@ int ex03() {
   return 0;
 }
 
-int ex04() {
+int p2ex04() {
   double num1, num2, num3, average;
 
   num1 = 75.35;
@@ -58,7 +58,7 @@ int ex04() {
   return 0;
 }
 
-int ex05() {
+int p2ex05() {
   float rrezja, siperfaqja, perimetri;
   const float PI = 3.14;
 
@@ -73,7 +73,7 @@ int ex05() {
   return 0;
 }
 
-int ex06() {
+int p2ex06() {
   double r1, r2, siperfaqja;
   const double PI = 3.14;
 
@@ -91,7 +91,7 @@ int ex06() {
 
 #include <iostream>
 
-int ex07() {
+int p2ex07() {
   int userInput, oret, minutat, sekondat;
 
   cout << "Koha e kaluar (sekonda): ";
@@ -102,10 +102,10 @@ int ex07() {
   minutat = userInput / 60;
   sekondat = userInput % 60;
 
-  // Keshtu vendosa ta shfaqim rezultatin
-  cout << "Oret: " << oret << endl;
-  cout << "Minutat: " << minutat << endl;
-  cout << "Sekondat: " << sekondat << endl;
+  cout << "Oret: " << oret << endl
+       << "Minutat: " << minutat << endl
+       << "Sekondat: " << sekondat << endl;
+
   return 0;
 }
 
