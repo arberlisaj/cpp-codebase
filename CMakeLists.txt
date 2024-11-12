@@ -11,10 +11,7 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(include)
 
 # Add source files
-set(SOURCES
-    src/main.cpp
-    src/pune_laboratori_nr2.cpp
-)
+file(GLOB SOURCES src/*.cpp)
 
 # Create the executable
 add_executable(cpp-adventures ${SOURCES})
