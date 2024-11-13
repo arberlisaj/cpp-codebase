@@ -1,10 +1,6 @@
-#include "pune_laboratori_nr2.h"
+#include "pune_laboratori_nr3.h"
 
 int main() {
-  ex01();
-  ex03();
-  ex04();
-  ex08();
-  ex10();
+  sayHello();
   return 0;
 }
