@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(cpp-adventures)
+project(cpp-codebase)
 
 # Exports
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -14,4 +14,4 @@ include_directories(include)
 file(GLOB SOURCES src/*.cpp)
 
 # Create the executable
-add_executable(cpp-adventures ${SOURCES})
+add_executable(output ${SOURCES})

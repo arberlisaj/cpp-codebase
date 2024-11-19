@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Initialization
-PROJECT_NAME="cpp-adventures"
+PROJECT_NAME="cpp-codebase"
 BUILD_DIR="build"
 
 # Create the build directory if it doesn't exist
