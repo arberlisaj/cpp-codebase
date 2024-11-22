@@ -1,14 +1,15 @@
-#include "pune_laboratori_nr1.h"
+#include "pune_laboratori_nr2.h"
 
 int main() {
-  p1ex01();
-  p1ex02();
-  p1ex03();
-  p1ex04();
-  p1ex05();
-  p1ex06();
-  p1ex07();
-  p1ex08();
-  p1ex09();
+  p2ex01();
+  p2ex02();
+  p2ex03();
+  p2ex04();
+  p2ex05();
+  p2ex06();
+  p2ex07();
+  p2ex08();
+  p2ex09();
+  p2ex10();
   return 0;
 }

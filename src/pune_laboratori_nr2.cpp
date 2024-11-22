@@ -109,7 +109,7 @@ int p2ex07() {
   return 0;
 }
 
-int ex08() {
+int p2ex08() {
   float cmimiOrigjinal, perqindjaFitimit, perqindjaTatimit, fitimi, cmimiFinal,
       tvsh;
 
@@ -135,7 +135,7 @@ int ex08() {
   return 0;
 }
 
-int ex09() {
+int p2ex09() {
   const double vellimiKutise = 3.78;
   const double kostoPerLiter = 38.0;
   const double fitimiPerKuti = 27.0;
@@ -155,7 +155,7 @@ int ex09() {
   return 0;
 }
 
-int ex10() {
+int p2ex10() {
   float gjatesiaTelit, gjeresiaKornizes, gjatesiaKornizes;
 
   cout << "Jep gjatesine e telit: ";
