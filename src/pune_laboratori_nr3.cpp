@@ -153,6 +153,41 @@ int p3ex08() {
 }
 
 int p3ex09() {
-  cout << "Ushtrimi i fundit" << endl;
+  int JAVET_E_PUNES = 5;
+  double NORMA_E_TAKSAVE = 0.14;
+  double pagaPerOre;
+  int orePuneNeJave;
+
+  cout << "Paga per ore: ";
+  cin >> pagaPerOre;
+
+  cout << "Oret e punuara cdo jave: ";
+  cin >> orePuneNeJave;
+
+  // Paga neto
+  double paga = pagaPerOre * orePuneNeJave;
+  double taksa = paga * NORMA_E_TAKSAVE;
+  double pagaNeto = paga - taksa;
+
+  // 10% Rroba te reja
+  double rrobaDheAksesore = pagaNeto * 0.1;
+  // 1% Paisje shkollore
+  double paisjeShkollore = pagaNeto * 0.01;
+
+  pagaNeto -= rrobaDheAksesore + paisjeShkollore;
+
+  // 25% e parave te mbetura obligacione kursimi
+  double kursimi = pagaNeto * 0.25;
+  // Prindrit shtojne $0.5 per cdo $1 te kursimit
+  double shtesaPrinderve = kursimi * 0.5;
+
+  cout << "Paga: $" << paga << endl
+       << "Taksa: $" << taksa << endl
+       << "Paga neto: $" << paga - taksa << endl
+       << "Rroba dhe aksesore: $" << rrobaDheAksesore << endl
+       << "Paisje shkollore: $" << paisjeShkollore << endl
+       << "Obligacione kursimi: $" << kursimi << endl
+       << "Obligacione kursimi (daddy's money): $" << shtesaPrinderve << endl;
+
   return 0;
 }
