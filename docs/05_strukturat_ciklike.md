@@ -1,0 +1,1 @@
+# Strukturat Ciklike
