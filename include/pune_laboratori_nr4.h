@@ -8,5 +8,6 @@ int p4ex04();
 int p4ex05();
 int p4ex06();
 int p4ex07();
+int p4ex07_2();
 
 #endif
