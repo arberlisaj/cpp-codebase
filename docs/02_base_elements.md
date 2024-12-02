@@ -1,1 +1,0 @@
-# Elementet Baze ne C++
