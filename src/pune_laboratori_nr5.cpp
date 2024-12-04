@@ -3,72 +3,283 @@
 using namespace std;
 
 int p5ex01() {
-  cout << "Ushtrimi 1" << endl;
+  int dita = 1;
+  int kalori = 0;
+  int kaloriTotale = 0;
+
+  // Counter controlled loop
+  while (dita <= 7) {
+    cout << "Kalorite e djegura per diten " << dita << ": ";
+    cin >> kalori;
+    kaloriTotale += kalori;
+    dita++;
+  }
+
+  cout << "Kalori te djegura: " << kaloriTotale << endl;
   return 0;
 }
 
 int p5ex02() {
-  cout << "Ushtrimi 2" << endl;
+  // Formoni nje program qe lexon dy numra te plote x dhe y dhe shfaq rezultatin
+  // x^y
+
+  int x, y;
+  int rezultati = 1;
+
+  cout << "Vlera e x: ";
+  cin >> x;
+  cout << "Vlera e y: ";
+  cin >> y;
+
+  for (int i = 1; i <= y; i++) {
+    rezultati *= x;
+  }
+
+  cout << "Rezultati: " << rezultati << endl;
   return 0;
 }
 
 int p5ex03() {
-  cout << "Ushtrimi 3" << endl;
+  int n;
+  int numri;
+  int shuma = 0;
+
+  cout << "Numri i numrave: ";
+  cin >> n;
+
+  // Counter controlled loop
+  int i = 1;
+  while (i <= n) {
+    cout << "Numri " << i << ": ";
+    cin >> numri;
+    shuma += numri;
+    i++;
+  }
+
+  cout << "Shuma: " << shuma << endl;
   return 0;
 }
 
 int p5ex04() {
-  cout << "Ushtrimi 4" << endl;
+  // Formoni nje program qe gjen shumen e numrave te futur nga tastiera derisa
+  // perdoruesi te fusi numrin 10, duke perdorur strukturen ciklike while te
+  // kontrolluar nga rojtari
+  int numri;
+  int shuma = 0;
+
+  // Sentinel controlled loop
+  while (numri != 10) {
+    cout << "Numri: ";
+    cin >> numri;
+    shuma += numri;
+  }
+
+  cout << "Shuma: " << shuma << endl;
   return 0;
 }
 
 int p5ex05() {
-  cout << "Ushtrimi 5" << endl;
+  // Formoni nje program i cili gjen shumen e numrave jo zero duke perdorur
+  // strukturen ciklike while te kontrolluar nga flamurtari
+
+  int numri;
+  int shuma = 0;
+
+  // Flag controlled loop
+  bool flag = true;
+  while (flag) {
+    cout << "Numri: ";
+    cin >> numri;
+    if (numri == 0) {
+      flag = false;
+    } else {
+      shuma += numri;
+    }
+  }
+
+  cout << "Shuma: " << shuma << endl;
   return 0;
 }
 
 int p5ex06() {
-  cout << "Ushtrimi 6" << endl;
+  int numri, shuma = 0, produkti = 1;
+
+  bool flag = true;
+  while (flag) {
+    cout << "Numri: ";
+    cin >> numri;
+
+    if (numri == 0) {
+      flag = false;
+    } else {
+      if (numri % 2 == 0) {
+        produkti *= numri;
+      } else {
+        shuma += numri;
+      }
+    }
+  }
+
+  cout << "Produkti i numrave cift: " << produkti << endl;
+  cout << "Shuma e numrave tek: " << shuma << endl;
   return 0;
 }
 
 int p5ex07() {
-  cout << "Ushtrimi 7" << endl;
+  int x, y;
+  int plotePjestohenMeTre = 0;
+  int plotePjestohenMePese = 0;
+
+  cout << "Fusni dy numra te plote(x,y): ";
+  cin >> x >> y;
+
+  while (x <= y) {
+    if (x % 3 == 0) {
+      plotePjestohenMeTre++;
+    }
+    if (x % 5 == 0) {
+      plotePjestohenMePese++;
+    }
+    x++;
+  }
+
+  cout << "Plotpjestohen me 3: " << plotePjestohenMeTre << endl
+       << "Plotpjestohen me 5: " << plotePjestohenMePese << endl;
   return 0;
 }
 
 int p5ex08() {
-  cout << "Ushtrimi 8" << endl;
+
+  int numriNotave, nota, shuma = 0;
+  cout << "Numri i notave: ";
+  cin >> numriNotave;
+
+  int i = 0;
+  while (i < numriNotave) {
+    cout << "Nota " << i << " :";
+    cin >> nota;
+
+    shuma += nota;
+
+    i++;
+  }
+
+  // Explicit type casting o profe
+  cout << "Mesatarja: " << (float)shuma / numriNotave << endl;
   return 0;
 }
 
 int p5ex09() {
-  cout << "Ushtrimi 9" << endl;
+  int shuma = 0, produkti = 1, numriMagjik;
+  cout << "Jep nje numer: ";
+  cin >> numriMagjik;
+
+  int i = 1;
+  while (i <= numriMagjik) {
+    if (i % 2 == 0) {
+      // if namber iz chift
+      shuma += i;
+    } else {
+      // ells namber iz tech
+      produkti *= i;
+    }
+    i++;
+  }
+
+  cout << "Shuma e numrave cift: " << shuma << endl;
+  cout << "Produkti i numrave tek: " << produkti << endl;
   return 0;
 }
 
 int p5ex10() {
-  cout << "Ushtrimi 10" << endl;
+  int n;
+
+  cout << "Jep nje numer: ";
+  cin >> n;
+
+  // Zgjidhja me for loop
+  int produktiForLoop = 1, i = 1;
+  for (; i <= n; i++) {
+    produktiForLoop *= i;
+  }
+
+  // Zgjidhja me while loop
+  int produktiWhileLoop = 1, j = 1;
+  while (j <= n) {
+    produktiWhileLoop *= j;
+    j++;
+  }
+
+  // Zgjidhja me do while loop
+  int produktiDoWhileLoop = 1, k = 1;
+  do {
+    produktiDoWhileLoop *= k;
+    k++;
+  } while (k <= n);
+
+  cout << "Produkti me for loop: " << produktiForLoop << endl
+       << "Produkti me while loop: " << produktiWhileLoop << endl
+       << "Produkti me do while loop: " << produktiDoWhileLoop << endl;
+
   return 0;
 }
 
 int p5ex11() {
-  cout << "Ushtrimi 11" << endl;
+  int n;
+  cout << "Jep nje numer: ";
+  cin >> n;
+
+  // check if n is prime or no
+  bool isPrime = true;
+  // why 2
+  for (int i = 2; i <= n / 2; i++) {
+    if (n % i == 0) {
+      isPrime = false;
+      break;
+    }
+  }
+
+  cout << "Numri " << n << (isPrime ? " " : " nuk ") << "eshte i thjeshte."
+       << endl;
   return 0;
 }
 
 int p5ex12() {
-  cout << "Ushtrimi 12" << endl;
+  for (int i = 0; i <= 4; i++) {
+    for (int j = 0; j <= 3; j++) {
+      cout << "*";
+    }
+    cout << endl;
+    for (int k = 0; k <= 7; k++) {
+      cout << "+";
+    }
+    cout << endl;
+  }
   return 0;
 }
 
 int p5ex13() {
-  cout << "Ushtrimi 13" << endl;
+  int n;
+  cout << "Jep nje numer: ";
+  cin >> n;
+
+  int i = 1;
+  do {
+    cout << i << "\n";
+    i++;
+  } while (i <= n);
+
+  cout << "Numri i fundit eshte: " << i - 1 << endl;
   return 0;
 }
 
 int p5ex14() {
-  cout << "Ushtrimi 14" << endl;
+  for (int i = 1; i <= 5; i++) {
+    for (int j = 1; j <= i; j++) {
+      cout << "*";
+    }
+    cout << endl;
+  }
   return 0;
 }
 
