@@ -33,5 +33,18 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "Build completed successfully! You can run the executable in the '$BUILD_DIR' directory."
+echo "Build completed successfully!"
+
+# Separate the build from the output 
+echo "----------------------------------------"
+
+# Run the executable if it exists
+EXECUTABLE="./output"
+
+if [ -f "$EXECUTABLE" ]; then
+    $EXECUTABLE
+else
+    echo "Executable 'output' not found!"
+    exit 1
+fi
 
