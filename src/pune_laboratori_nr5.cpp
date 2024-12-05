@@ -20,9 +20,6 @@ int p5ex01() {
 }
 
 int p5ex02() {
-  // Formoni nje program qe lexon dy numra te plote x dhe y dhe shfaq rezultatin
-  // x^y
-
   int x, y;
   int rezultati = 1;
 
@@ -284,21 +281,74 @@ int p5ex14() {
 }
 
 int p5ex15() {
-  cout << "Ushtrimi 15" << endl;
+  for (int i = 5; i >= 1; i--) {
+    for (int j = 1; j <= i; j++) {
+      cout << "*";
+    }
+    cout << endl;
+  }
   return 0;
 }
 
 int p5ex16() {
-  cout << "Ushtrimi 16" << endl;
+  for (int i = 1; i <= 5; i++) {
+    for (int j = 1; j <= 5; j++) {
+      cout << "*";
+    }
+    cout << endl;
+  }
   return 0;
 }
 
 int p5ex17() {
-  cout << "Ushtrimi 17" << endl;
+  // Fibonacci
+  int n;
+  cout << "Jep nje numer: ";
+  cin >> n;
+
+  while (n < 0) {
+    cout << "Jep nje numer pozitiv: ";
+    cin >> n;
+  }
+
+  int kufizaPara = 0, kufizaAktuale = 1, kufizaArdhshme;
+  for (int i = 0; i < n; i++) {
+    cout << kufizaPara << " ";
+    kufizaArdhshme = kufizaPara + kufizaAktuale;
+    kufizaPara = kufizaAktuale;
+    kufizaAktuale = kufizaArdhshme;
+  }
+
+  cout << endl;
   return 0;
 }
 
 int p5ex18() {
-  cout << "Ushtrimi 18" << endl;
+  int numriBanoreveA, numriBanoreveB;
+  float normaRritjesA, normaRritjesB;
+
+  cout << "Numri i banoreve te qytetit A: ";
+  cin >> numriBanoreveA;
+  cout << "Numri i banoreve te qytetit B: ";
+  cin >> numriBanoreveB;
+  cout << "Norma e rritjes se qytetit A(%): ";
+  cin >> normaRritjesA;
+  cout << "Norma e rritjes se qytetit B(%): ";
+  cin >> normaRritjesB;
+
+  while (normaRritjesA < normaRritjesB + 1) {
+    cout << "Norma e rritjes se qytetit A duhet te jete me e madhe" << endl;
+    cout << "Norma e rritjes se qytetit A(%): ";
+    cin >> normaRritjesA;
+  }
+
+  int vite = 0;
+  while (numriBanoreveA < numriBanoreveB) {
+    numriBanoreveA += numriBanoreveA * normaRritjesA / 100;
+    numriBanoreveB += numriBanoreveB * normaRritjesB / 100;
+    vite++;
+  }
+
+  cout << "Pas " << vite << " vitesh popullsia qytetit A > B." << endl;
   return 0;
 }
