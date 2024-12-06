@@ -58,9 +58,6 @@ int p5ex03() {
 }
 
 int p5ex04() {
-  // Formoni nje program qe gjen shumen e numrave te futur nga tastiera derisa
-  // perdoruesi te fusi numrin 10, duke perdorur strukturen ciklike while te
-  // kontrolluar nga rojtari
   int numri;
   int shuma = 0;
 
@@ -76,9 +73,6 @@ int p5ex04() {
 }
 
 int p5ex05() {
-  // Formoni nje program i cili gjen shumen e numrave jo zero duke perdorur
-  // strukturen ciklike while te kontrolluar nga flamurtari
-
   int numri;
   int shuma = 0;
 
