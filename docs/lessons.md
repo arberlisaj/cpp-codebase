@@ -1,25 +1,27 @@
-# Leksioni 1 - Hyrje ne Sistemet Kompjuterike dhe Gjuhet e Programimit
+# Hyrje ne Algoritme dhe Programim
 
-## CPU dhe Memoria Kryesore
+## Leksioni 1
+
+### CPU dhe Memoria Kryesore
 
 Te gjitha programet duhen te ngarkohen ne memorien kryesore perpara se te ekzekutohen sidhe gjitha te dhenat duhen te vendosen ne memorien kryesore perpara se te manipulohen.
 Memoria kryesore eshte nje sekuence e renditur e qelizave te memories (cdo qelize permban instruksione ose te dhena dhe ka nje vendndodhje unike ne memorien kryesore qe quhet adresa e memories).
 
-## Memoria dytesore
+### Memoria dytesore
 
 Paisje qe ruajne informacioin ne menyre permanente dhe mund te lexohen dhe shkruhen nga kompjuteri. Memoria dytesore eshte e nevojshme per te ruajtur te dhenat per nje kohe te gjate.
 
-## Software
+### Software
 
 Programe kompjuterike jane te shkruara per te performuar detyra specifike, programet ndahen ne sisteme operative (monitoron aktivitetet e pergjithshme te kompjuterit) dhe programe aplikative (performojne detyra specifike si perpunim teksti, perpunim te dhenash dhe lojra).
 
-## Gjuha e kompjuterit
+### Gjuha e kompjuterit
 
 - **Sinjali Analog:** forma valore e vazhdueshme qe ndryshon vazhdimisht.
 - **Shifra binare(bit):** shifra 0 dhe 1 qe perdoren per te shprehur te dhenat.
 - **Gjuha makine:** gjuhe qe kompjuteri e kupton, eshte e shkruar ne shifra binare.
 
-## Zhvillimi i nje programi ne C++
+### Zhvillimi i nje programi ne C++
 
 Hapat qe nevojiten per krijimin e nje programi ne C++ jane:
 
@@ -32,23 +34,23 @@ Hapat qe nevojiten per krijimin e nje programi ne C++ jane:
 
 > Linkeri kombinon programin objekt me programet e tjera ne librari per te ekzekutuar kodin.
 
-## Programim i strukturuar
+### Programim i strukturuar
 
 - **Dizenjim i strukturuar:** Ndarja e problemit ne probleme me te vegjel.
 - **Programim i strukturuar:** Perfshin implementimin e nje dizenjimi te strukturuar.
 - **Dizenjimi i strukturuar** gjithashtu quhet: **Top-Down Design**, **Stepwise Refinement** dhe **modular programming**.
 
-## Programim i dizenjuar ne objekte
+### Programim i dizenjuar ne objekte
 
 Object Oriented Design (OOD) eshte nje metodologji e programimit qe perdor objekte per te modeluar sistemet dhe per te zgjidhur problemet.
 
-## Programimi i orientuar ne objekte
+### Programimi i orientuar ne objekte
 
 Object Oriented Programming (OOP) eshte nje model programimi qe perdor objekte dhe klase per te projektuar dhe organizuar programe.
 
-# Leksioni 2 - Elementet Baze te C++
+## Leksioni 2 - Elementet Baze te C++
 
-## Baza e programimit ne C++
+### Baza e programimit ne C++
 
 Rregullat e nje Gjuhe Programimi ndahen ne **Rregulla Sintaksore** dhe **Rregulla Semantike**.
 
@@ -56,7 +58,7 @@ Rregullat e nje Gjuhe Programimi ndahen ne **Rregulla Sintaksore** dhe **Rregull
 - **Rregullat Semantike:** Percaktojne kuptimin e deklarimeve (instruksioneve-udhezimeve).
 - **Nenprogrami:** Nje koleksion instruksionesh, komandash dhe udhezimesh qe kryejne nje detyre te caktuar.
 
-## Komentet
+### Komentet
 
 Komentet jane per lexuesin jo per kompilatorin. Sherbejne per t'a bere me te kuptueshem kodin e programit.
 Ndahen ne dy lloje:
@@ -64,7 +66,7 @@ Ndahen ne dy lloje:
 - **Komente ne nje rresht:** Fillon me `//` dhe perfundon me fundin e rreshtit.
 - **Komente me shume rreshta:** Fillon me `/*` dhe perfundon me `*/`.
 
-## Fjale te rezervuara (keywords)
+### Fjale te rezervuara (keywords)
 
 Fjalet e rezervuara jane fjale qe nuk mund te perdoren si emra te variablave, funksioneve ose klasave, disa shembuj jane:
 
@@ -79,7 +81,7 @@ Fjalet e rezervuara jane fjale qe nuk mund te perdoren si emra te variablave, fu
 - `do`
 - `class`
 
-## Identifikatoret
+### Identifikatoret
 
 Nje **identifikator** eshte emri i nje entiteti qe shfaqet ne nje program si p.sh. emri i nje variabli, funksioni, klase, etj.
 Identifikatoret perbehen nga shkronja, numra dhe simbole te vecanta si `_` dhe `#`, duhet te fillojne me nje shkronje ose nenvizim, nuk duhet te jete fjale kyce sidhe nuk mund te permbaje hapsira dhe simbole te vecanta.
@@ -95,12 +97,12 @@ Ne ndryshim nga fjalet e rezervuara identifikatoret e paracaktuar mund te riperc
 | `one+two`                   | Simboli + nuk mund te perdoret ne nje identifikator.   | `onePlusTwo`             |
 | `2nd`                       | Nje identifikator nuk mund te filloje me numer.        | `second`                 |
 
-## Hapesirat
+### Hapesirat
 
 Hapesirat ndajne simbolet e vecanta, fjale te rezervuara dhe identifikatoret, perdorimi i duhur i hapesirave eshte shume i rendesishem.
 Perdorimi i duhur i hapesirave eshte shume i rendesishem per ta bere kodin e programit me te lexueshem.
 
-## Tipi/Lloji i te dhenave (Data Type)
+### Tipi/Lloji i te dhenave (Data Type)
 
 Nje lloji i te dhenave eshte nje segment vlerash se bashku me nje grup operacionesh te lejuara qe mund te kryhen mbi to.
 
@@ -110,7 +112,7 @@ Llojet e te dhenave ne C++ ndahen ne tre kategori:
 2. Lloje te dhenash te perbera (te strukturuara si `struct`,`class`,`union` dhe `enum`).
 3. **Pointers** te cilet jane variabla qe ruajne adresen e nje variabli tjeter ne memorie ne vend te nje vlere.
 
-## Operatoret Aritmetik
+### Operatoret Aritmetik
 
 Operatoret aritmetik jane operatoret qe kryejne operacione mbi dy ose me shume operande dhe ata operatore jane:
 
@@ -124,7 +126,7 @@ Operatoret aritmetik jane operatoret qe kryejne operacione mbi dy ose me shume o
 
 Mbetja e pjestimit `%` mund te perdoret vetem me llojin e te dhenave integer.
 
-## Perparesia e Operatoreve dhe Shprehjeve Matematikore
+### Perparesia e Operatoreve dhe Shprehjeve Matematikore
 
 Kur perdorni karakterin slash se bashku me tipet e te dhenave integer, rezultati do te jete vetem pjesa e plote (pa rrumbullakosje).
 
@@ -132,7 +134,7 @@ Kur perdorni karakterin slash se bashku me tipet e te dhenave integer, rezultati
 - **Operandet:** jane numra qe marin pjese ne nje shprehje.
 - **Operatoret:** kryejne veprime me operandet (operatoret mund te jene unary, binary ose ternary).
 
-## Rendi i Perparesise
+### Rendi i Perparesise
 
 Perparesia e veprimeve kryesore me operatoret matematikore baze ne shprehjet ne C++ eshte:
 
@@ -141,7 +143,7 @@ Perparesia e veprimeve kryesore me operatoret matematikore baze ne shprehjet ne 
 - Veprimi i mbledhjes `+` dhe zbritjes `-` jane ne te njejtin nivel perparesie dhe jane te renditur ne fund.
 - Kur perparesia dhe renditja jane ne te njejtin nivel veprimet kryhen nga e majta ne te djathte.
 
-## Konvertimi i Llojit te te Dhenave
+### Konvertimi i Llojit te te Dhenave
 
 **Konvertimi Implicit (i nenkuptuar):** kryhet kur vlera e nje tipi te te dhenave konvertonet ne menyre automatike ne nje vlere te nje lloji tjeter te dhene.
 
@@ -152,7 +154,7 @@ Perparesia e veprimeve kryesore me operatoret matematikore baze ne shprehjet ne 
 static_cast<data_type>(expression);
 ```
 
-## Lloji i te Dhenave String
+### Lloji i te Dhenave String
 
 - Lloji i te dhenave **string** eshte e percaktuar nga programuesi mbeshtetur ne librarine standarte te C++ `ANSI/ISO`.
 - Nje **string** eshte nje sekuence e zero ose me shume karaktereve te vendosura midis thonjezave te dyfishta `" "`.
@@ -160,7 +162,7 @@ static_cast<data_type>(expression);
 - Secili prej karaktereve ka nje pozicion relativ ne nje string (pozicioni i karakterit te pare eshte 0).
 - Gjatesia e nje stringu eshte numri i karaktereve qe permban.
 
-## Leximi i te Dhenave
+### Leximi i te Dhenave
 
 - `cin` perdoret me `>>` per te marre nje apo me shume vlera nga perdoruesi.
   cin eshte nje instruksion per **futjen e te dhenave** dhe operatori per marrjen e bashkesise se karaktereve (stream extraction operator) `>>` perdoret per te lexuar vlerat nga perdoruesi.
@@ -172,7 +174,7 @@ cin >> variable;
 cin >> variable1 >> variable2 >> variable3;
 ```
 
-## Operatoret Rrites dhe Zbrites
+### Operatoret Rrites dhe Zbrites
 
 - **Operatori i rritjes `++`:** rrit vleren e nje variabli per nje.
 - **Operatori i zbrites `--`:** zbre vleren e nje variabli per nje.
@@ -184,7 +186,7 @@ variable++;
 variable--;
 ```
 
-## Shfaqja e te Dhenave
+### Shfaqja e te Dhenave
 
 `cout` eshe nje instruksion per shfaqjen e te dhenave.
 
@@ -216,7 +218,7 @@ Nje **escape sequence** eshte nje sekuence karakteresh qe nuk perfaqeson vetvete
 | `\nnn`          | Octal value       |
 | `\xhh`          | Hexadecimal value |
 
-## Direktivat e Preprocessorit
+### Direktivat e Preprocessorit
 
 - C++ ka nje numer te vogel veprimesh.
 - Shume funksione dhe simbole qe nevojiten per te ekzekutuar nje program ne C++ jane te perfshira ne librarite e kesaj gjuhe.
@@ -225,7 +227,7 @@ Nje **escape sequence** eshte nje sekuence karakteresh qe nuk perfaqeson vetvete
 - Direktiva me e njohur e preprocessorit eshte `<iostream>`.
 - **cin** dhe **cout** jane dy objekte te klases **istream** dhe **ostream**.
 
-## Perdorimi i Llojit te te Dhenave String ne nje Program
+### Perdorimi i Llojit te te Dhenave String ne nje Program
 
 Per te perdorur llojin e te dhenave **string** duhet ta aksesojme ate nepermjet headerit **string**.
 
@@ -235,7 +237,7 @@ Per te perdorur llojin e te dhenave **string** duhet ta aksesojme ate nepermjet 
 string name = "John Doe";
 ```
 
-## Formimi i nje Programi ne C++
+### Formimi i nje Programi ne C++
 
 Nje program ne C++ eshte nje bashkesi funksionesh, njeri prej te cileve eshte funksioni kryesor **main**.
 Sintaksa e funksionit **main** eshte:
@@ -252,14 +254,14 @@ int main (){
 - Kodi i ekzekutueshem krijohet ne momentin qe object code eshte i lidhur me objektet Hardware dhe Software te sistemit (system resources).
 - Nje program C++ permban dy lloje instruksionesh **deklarative** (instruksione qe deklarojne variabla) dhe **ekzekutuese** (instruksione te cilat kryejne llogaritje ose manipulojne te dhena).
 
-## Avancime ne Instruksionet e Vleredhenjes
+### Avancime ne Instruksionet e Vleredhenjes
 
 Kemi dy forma te vleredhenies te qe jane:
 
 - Operatore te thjeshte: `+`, `-`, `*`, `/`, `%`.
 - Operatore te perbere (compound): `+=`, `-=`, `*=`, `/=`, `%=`.
 
-## Permbledhje
+### Permbledhje
 
 - Nje program ne C++ eshte nje bashkesi funksionesh, ku funksioni kryesor eshte funksioni **main**.
 - **Identifikatoret** perbehen nga shkronja, numra dhe nenvija dhe fillojne gjithmone me shkronje ose nenvije.
@@ -270,3 +272,52 @@ Kemi dy forma te vleredhenies te qe jane:
 - Nje instruksion i perziere permban dhe numra te plote dhe numra me presje.
 - **Konvertimi i llojit te te dhenave** mund te jete implicit ose eksplicit.
 - Nje konstante inicializohet ne momentin qe deklarohet.
+
+## Leksioni 3
+
+### Rrjedhat Hyrese/Dalese dhe Paisjet Standarte per I/O
+
+Input/Output: sekuence bytesh nga burimi deri ne destinacion.
+
+- **Rrjedha (Stream):** Sekuence karakteresh nga burimi ne destinacion.
+- **Rrjedha Hyrese (Input Stream):** Sekuence karakteresh nga nje paisje hyrese drejt nje kompjuteri/njesie qendrore.
+- **Rrjedha Dalese (Output Stream):** Sekuence karakteresh nga nje kompjuter/njesi qendrore drejt nje paisje dalese.
+
+Per te marre te dhena nga tastiera dhe per t'i shfaqur ne ekran duhet te perdoret header file **iostream**.
+Ky skedar permban perkufiszimet e dy tipeve te te dhenave: `istream` (Input Stream) dhe `ostream` (Output Stream).
+
+### cin dhe operatori i nxjerrjes >>
+
+**Sintaksa** per futjen e te dhenave me ane te `cin` dhe operatorit nxjerrjes `>>` eshte:
+
+```cpp
+cin >> "Hello World\n";
+```
+
+Operatori nxjerres `>>` eshte binar (pra manipulon dy operande).
+
+// build table two cols and three rows
+
+| Lloji i variablit | Vlere Hyrese e vlefshme per a                                                                                                                                                                  |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `char`            | Nje karakter pervec hapsires boshe                                                                                                                                                             |
+| `int`             | Nje numer i plote negativ apo pozitiv                                                                                                                                                          |
+| `double`          | Numer me presje negativ ose pozitiv mundesisht i parandjekur nga shenja. Nese numri i futur eshte numer i plote, ai konvertohet ne numer me presje, ku shifra pas presjes dhjetore eshte zero. |
+
+- Nese nje tip te dhene `char` vendoset nje vlere apo variabel `int` ose `double` shkaktohen probleme serioze qe quhen **Gabime ne Futjen e te Dhenave (Input Failure)**.
+
+Kur lexohen te dhenat e nje variabli te tipit `char` `>>` injoron te gjitha hapsirat, gjen dhe ruan vetem karakterin pasardhes
+
+Kur lexon te dhenat e variableve `int` dhe `double` injoron hapsirat, lexon shenjat + ose - (nese ka), lexon shifrat duke perfshire numrat me presje dhjetore apo floating point dhe ndalon kur ka hapsire apo nje karakter jo shifror.
+
+### Perdorimi i Funksioneve te paracaktuar ne nje program
+
+Nje funksion (nenprogram) eshte nje bashkesi instruksionesh. `main` ekzekutohet kur programi vihet ne pune. Funksionet e tjera ekzekutohen vetem kur thirren. C++ eshte i pasur me shume funksione.
+
+- **Header file** mund te permbaje disa funksione.
+
+- Per te perdorur nje **funksion te paracaktuar**, duhet te perdorim emrin e duhur te header file ku gjendet ky funksion.
+
+- Per te perdorur nje funksion te paracaktuar gjithashtu duhet te dime: emrin, numrin e parametrave, radhen e parametrave, tipin e cdo parametri, cfare kryen funksioni dhe cfare lloji vlere kthen ai.
+
+Per te perdorur funksionin e paracaktuar **pow**, duhet te perfshijme header file `cmath`.
