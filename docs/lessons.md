@@ -321,3 +321,97 @@ Nje funksion (nenprogram) eshte nje bashkesi instruksionesh. `main` ekzekutohet 
 - Per te perdorur nje funksion te paracaktuar gjithashtu duhet te dime: emrin, numrin e parametrave, radhen e parametrave, tipin e cdo parametri, cfare kryen funksioni dhe cfare lloji vlere kthen ai.
 
 Per te perdorur funksionin e paracaktuar **pow**, duhet te perfshijme header file `cmath`.
+
+### Funksioni cin dhe get
+
+Variabli `cin` mund te aksesoje funksionin/metoden e rrjedhes get
+
+Funksioni/metoda `get` perdoret per te lexuar **Karakterin** qe vjen menjehere me pas perfshi dhe **Hapesiren** nga Rrjedha Hyrese.
+
+Sintaksa e funksionit cin dhe get:
+
+```cpp
+cin.get();
+```
+
+### Funksioni cin dhe ignore
+
+Variabli `cin` mund te aksesoje funksionin e rrjedhes `ignore` (cin.ignore() sherben per te injoruar nje pjese te rrjedhes hyrese).
+
+Sintaksa e funksionit `ignore` eshte:
+
+```cpp
+cin.ignore(intExp, chExp);
+// intExp eshte nje shprehje e tipit int
+// chExp eshte nje shprehje e tipit char
+```
+
+Nese intExp eshte nje vlere m, instruksioni ben te injorohen m karakteret paraardhes ose te gjitha deri ne karakterin e specifikuar nga chExp.
+
+### Funksioni putback dhe peek
+
+Funksioni putback vendos perseri karakterin e meparshem te hequr nga funksioni get nga nje rrjedhe hyrese, serish ne ate rrjedhe.
+
+Funksioni peek kthen karakterin pasardhes nga rrjedha hyrese dhe nuk e heq karakterin nga ajo rrjedhe.
+
+Sintaksa e funksionit putback dhe peek:
+
+```cpp
+// nje variabel i rrjedhes hyrese
+isCtreamVar.putback(ch);
+ch = isStreamVar.peek();
+```
+
+### Roli i pikes midis variablave te rrjedhes I/O dhe funksioneve I/O: Nje mase paraprake
+
+`cin.get(ch);` cin dhe get jane dy identifikatore te ndryshem te ndare nga nje pike.
+
+i ashtuquajturi dot notation ben ndarjen e emrit te variablave te rrjedhes hyrese nga emri i funksionit ose elementit.
+
+Ne C++, pike eshte **operatori i aksesimit te anetarit**.
+
+### Problematikat ne futjen e te dhenave
+
+Nese te dhenat e futura nuk jane te njejta me tipin e variablit te deklaruar, programi mund te nxjerre probleme.
+
+Nese perpiqeni te lexoni nje shkronje ne nje variabel `int` ose `double` do keni gabime ne futjen e te dhenave (input failure).
+
+Nese ndodh nje gabim kur lexon te dhenat, Input Stream futet ne gjendje deshtimi.
+
+### Funksioni clear
+
+Nese programi hyn ne gjendjen e gabimit **Fail State**, te gjitha instruksionet e metejshme **injorohen**.
+
+Programi vazhdon te ekzekutoje instruksionet pasardhese me cfaredo lloji vlere te ruajtur ne variabel me heret ose ne forme te rastesishme.
+
+Funksioni `clear` riparon rrjedhen hyrese duke e kthyer ne nje gjendje pune.
+
+Sintaksa e funksionit `clear`:
+
+```cpp
+isStreamVar.clear();
+```
+
+### Outputi dhe Formatimi i tij
+
+Sintaksa e `cout` kur perdoret `<<` eshte:
+
+```cpp
+cout << expression or manipulator << expression or manipulator ... ;
+```
+
+Manipulatori perdoret per te formatuar outputin (shembull kemi endl).
+
+### Manipulatori setprecision
+
+Sintaksa e manipulatorit `setprecision` eshte:
+
+```cpp
+setprecision(n);
+```
+
+Shfaq numrat me presje n pas presjes dhjetore.
+
+Argumenti **n** eshte numer i plote.
+
+Ne program duhet te perfshihet headeri `iomanip`.
