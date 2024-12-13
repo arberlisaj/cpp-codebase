@@ -2,6 +2,8 @@
 
 ## Leksioni 1
 
+Hyrje ne sistemet kompjuterike
+
 ### CPU dhe Memoria Kryesore
 
 Te gjitha programet duhen te ngarkohen ne memorien kryesore perpara se te ekzekutohen sidhe gjitha te dhenat duhen te vendosen ne memorien kryesore perpara se te manipulohen.
@@ -48,7 +50,9 @@ Object Oriented Design (OOD) eshte nje metodologji e programimit qe perdor objek
 
 Object Oriented Programming (OOP) eshte nje model programimi qe perdor objekte dhe klase per te projektuar dhe organizuar programe.
 
-## Leksioni 2 - Elementet Baze te C++
+## Leksioni 2
+
+Elementet baze te C++
 
 ### Baza e programimit ne C++
 
@@ -274,6 +278,8 @@ Kemi dy forma te vleredhenies te qe jane:
 - Nje konstante inicializohet ne momentin qe deklarohet.
 
 ## Leksioni 3
+
+Input / Output
 
 ### Rrjedhat Hyrese/Dalese dhe Paisjet Standarte per I/O
 
@@ -535,3 +541,27 @@ Leximi dhe Shkrimi ne skedare eshte nje **proces me pese hapa:**
 - Manipulatoret `setprecision`, `fixed`, `showpoint`, `setw`, `setfill`, `left` dhe right mund te perdoren per te formatuar te dhenat dalese.
 - Per te perdorur manipulatoret `setprecision`, `setw` dhe `setfill` ne program duhet te perfshihet skedari header **iomanip**.
 - Skedari header **fstream** permban perkufizime per `ifstream` dhe `ofstream`.
+
+## Leksioni 4
+
+Strukturat e Kontrollit
+
+### Strukturat Kushtezuese: if dhe if ... else
+
+Nje shprehje qe rezultati vleresohet nese eshte `true` ose `false` quhet **shprehje logjike**.
+
+**Strukturat Kushtezuese** ndryshojne rrjedhen e programit ne varesi te vleres se shprehjes logjike.
+
+### Operatoret Relacional
+
+Secili prej operatoreve **relacional** eshte nje operator **binar**.
+
+Shprehjet qe perdorin **operatoret relacionale** vleresohen gjithmone si `true` ose `false`.
+
+| Operator | Pershkrimi                    |
+| -------- | ----------------------------- |
+| `==`     | e barabarte me                |
+| `!=`     | e ndryshme nga                |
+| `>`      | me e madhe se                 |
+| `<`      | me e vogel se                 |
+| `>=`     | me e madhe ose e barabarte me |
