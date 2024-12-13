@@ -415,3 +415,123 @@ Shfaq numrat me presje n pas presjes dhjetore.
 Argumenti **n** eshte numer i plote.
 
 Ne program duhet te perfshihet headeri `iomanip`.
+
+### Manipulatori fixed
+
+- **fixed** shfaq numrat me presje ne nje format te rregulluar decimal (Mund t'a hiqni duke perdorur funksionin unsetf `cout.unsetf(ios::fixed);`.
+
+- Manipulatori `scientific` shfaq numrat me presje ne formatin shkencor.
+
+### Manipulatori showpoint
+
+- **showpoint** mundeson shfaqjen e numrave me presje bashke me zerot pa vlere pas presjes dhjetore.
+
+```cpp
+cout << fixed << showpoint;
+```
+
+### Ndaresi i 14 shifrave ne C++
+
+- Ne leximin dhe shkrimin e numrave shume te gjate mund te ndodhin dhe gabime.
+- Ne C++ presjet nuk mund te perdoren per te ndare shifrat e numrave.
+- C++ ka ndaresin e tij te shifrave (thonjezat teke 1'000'000).
+
+### Manipulatori setw
+
+- Shfaq vlerat e nje instruksioni ne nje numer te specifikuar kolonash.
+
+```cpp
+cout << setw(n) << x << endl;
+```
+
+- Nese numri i kolonave te percaktuara tejkalon numrin e kolonave qe ze rezultati i shprehjes rezultati vendoset ne te djathte dhe kolonat e paperdorura ne te majte mbeten bosh.
+
+- Ne program duhet te perfshihet dhe headeri i file **iomanip**.
+
+### Mjetet shtese te formatimit te output-it
+
+- Disa mjete shtese qe na japin me teper mundesi per kontrollin e formatit te outputit jane: `setfill`, `left`, `right`, `unsetf`.
+
+### Manipulatori setfill
+
+- Variablat e rrjedhes dalese perdorin `setfill` per te mbushur me karaktere apo shenja kolonat e paperdorura.
+
+```cpp
+ostreamVar << setfill(ch);
+cout << setfill("#")
+```
+
+### Manipulatoret left dhe right
+
+- Manipulatori `left` shfaq rezultatin ne te majte.
+
+```cpp
+ostreamVar << left;
+```
+
+- `left` mund te caktivizohet duke perdorur `unsetf`.
+
+```cpp
+ostreamVar.unsetf(ios::left);
+```
+
+- Manipulatori `right` shfaq rezultatin ne te djathte.
+
+```cpp
+ostreamVar << right;
+```
+
+### Llojet e Manipulatoreve
+
+- Ekzistojne dy lloje manipulatoresh per Rrjedhat Hyrese/Dalese, `me parametra` dhe `pa parametra`.
+
+- Nese perdoren **Manipulatoret e Rrjedhave me Parametra** ne program duhet te perfshihet dhe skedari header **iomanip**.
+
+- Nese perdoren **Manipulatoret e Rrjedhave pa Parametra** ne program duhet te perfshihet nga skedari header **iostream**.
+
+### Input/Output dhe tipi i te dhenave string
+
+- Nje variabel i rrjedhes hyrese si `cin` dhe operatori `>>` mund te lexojne nje string ne nje variabel te llojit string.
+
+- Operatori i nxjerrjes (Extraction Operator) nuk mund te perdoret kur rrjedha hyrese permban hapsira sepse `>>` ndalon leximin e rrjedhes kur ka nje hapsire boshe.
+
+- Perdoret funksioni `getline` i lexon gjithe rrjedhen hyrese deri ne fund te rreshtit aktual.
+
+```cpp
+getline(istreamVar, strVar);
+```
+
+### Debugging: Te kuptojme gabimet logjike dhe gjetjen e gabimeve me instruksionet cout
+
+- Gabimet sintaksore percaktohen nga kompilatori.
+
+- Ndersa gabimet logjike zakonisht nuk kapen nga kompilatori
+
+### Skedaret Input/Output
+
+Nje skedar eshte nje hapsire ne memorien dytesore ku ruhen informacione.
+
+Leximi dhe Shkrimi ne skedare eshte nje **proces me pese hapa:**
+
+1. Perfshini ne program skedarin header `fstream`.
+2. Deklaroni variablat e file stream.
+3. Shoqeroni variablat e skedarit file stream me burimet input/output - te referuara si **opening the files**.
+4. Perdorni variablat e skedarit stream me `>>` , `<<` apo funksione te tjera input/output.
+5. Mbyllni skedaret.
+
+### Permbledhje
+
+- **Rrjedha:** Sekuence e pafundme karakteresh nga burimi ne destinacion.
+- **Rrjedhe Hyrese:** nga burimi ne kompjuter.
+- **Rrjedhe Dalese:** nga kompjuteri ne burim.
+- **cin:** te dhenat hyrese standarte.
+- **cout:** te dhenat dalese standarte.
+- Per te perdurur **cin** dhe **cout**, duhet te prfshini skedarin header **iostream**.
+- **get** lexon te dhenat karakter pas karakteri pa anashkaluar asnje karakter.
+- **ignore** injoron leximin e te dhenave ne nje rresht.
+- **putback** vendos perseri karakterin e fundit te marre nga funksioni get ne rrjedhen hyrese te te dhenave.
+  **peek** kthen karakterin pasardhes te rrjedhes hyrese, por nuk e heq ate nga rrjedha.
+- Perpjekja per te lexuar te dhena te pavlefshme brenda variablave shkakton gjendje gabimi.
+- Manipulatoret `setprecision`, `fixed`, `showpoint`, `setw`, `setfill`, `left` dhe right mund te perdoren per te formatuar te dhenat dalese.
+- Per te perdorur manipulatoret `setprecision`, `setw` dhe `setfill` ne program duhet te perfshihet skedari header **iomanip**.
+- Skedari header **fstream** permban perkufizime per `ifstream` dhe `ofstream`.
