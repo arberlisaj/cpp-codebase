@@ -138,7 +138,7 @@ Kur perdorni karakterin slash se bashku me tipet e te dhenave integer, rezultati
 - **Operandet:** jane numra qe marin pjese ne nje shprehje.
 - **Operatoret:** kryejne veprime me operandet (operatoret mund te jene unary, binary ose ternary).
 
-### Rendi i Perparesise
+### Rendi i Perparesise se operatoreve
 
 Perparesia e veprimeve kryesore me operatoret matematikore baze ne shprehjet ne C++ eshte:
 
@@ -743,3 +743,168 @@ Nje zhgjedhje eshte kontrolli per nje vlere tolerance si:
 ```cpp
 if fabs (x-y) < 0.000001
 ```
+
+### Shoqerimi i Operatoreve Relacional
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(){
+    int num;
+    cout << "Fusni nje numer te plote: " << endl;
+    cin >> num;
+
+    if(0 <= num <= 10)
+        cout << num << " eshte mes 0 dhe 10." << endl;
+    else
+        cout << num << "nuk eshte mes 0 dhe 10." << endl;
+
+    return 0;
+}
+```
+
+### Shmangia e gabimeve duke shmangur konceptet dhe teknikat pjeserisht te kuptueshme
+
+Konceptet dhe teknikat e nje gjuhe programimi duhen perdorur sakte ne te kundert zgjidhja do te jete e pasakte ose jo e plote.
+
+Nese nuk e kuptoni teresishte nje teknike ose nje koncept mos e perdorni ate.
+
+### Deshtimi ne futjen e te dhenave dhe instruksioni if
+
+Nese nje rrjedhe hyrese (input stream) futet ne gjendje deshtimi te gjitha komandat per futjen e te dhenave pasardhese lidhura me ate rrjedhen injorohen, programi vazhdon te ekzekutohet dhe kodi numd te shaqe rezultate te gabuara.
+
+Perdorni instruksionet `if` per te kontrolluar gjendjen e rrjedhes hyrese.
+Nese rrjedha hyrese futet ne gjendje deshtimi, shtoni instruksione qe mundesojne ndalimin e ekzekutimit te programit.
+
+### Ndryshimi mes barazise dhe operatorit te vleredhenies
+
+C++ ju lejon te perdorni cfaredo lloji instruksioni qe vleresohet si `true` ose `false` ne nje strukture `if`.
+
+```cpp
+if (x = 5)
+    cout << "Vlera eshte pese" << endl;
+```
+
+Shkruajtja e `=` ne vend te `==` eshte nje thike me dy presa (gabim logjik dhe jo sintaksor).
+
+### Operatori Kushtezues `?:`
+
+Operatori Ternar merr si argumente operande
+
+```cpp
+expression1 ? expression2 : expression3;
+```
+
+Nese shprehja e pare eshte e vertete rezultati i instruksionit kushtezues do te jete shprehja e dyte, ne te kundert do te jete shprehja e trete.
+
+### Stili dhe Forma e Programit: Kryeradha
+
+Nje program i shkruar sic duhet ju ndihmon te dalloni dhe ti rergulloni me shpejt gabimet dhe shfaq grupimin e sakte te instruksioneve.
+
+Vendosni nje rresht bosh mes instruksioneve qe jane te ndara apo nuk kane lidhje me njeri-tjetrin.
+
+Dy stilet me te perdorshme per vendosjen e kllapave:
+
+- Secila kllape ne nje rresht me vete.
+
+```cpp
+if (expression)
+{
+    statement;
+}
+```
+
+- Kllapa hapese vendoset ne nje rresht vetem, ndersa kllapa mbyllese vendoset ne fund te instruksioneve si rresht me vete
+
+```cpp
+if (expression) {
+    statement;
+}
+```
+
+### Perdorimi i pseudokodeve per te programuar, testuar dhe korigjuar nje program
+
+- **Pseudokodi** eshte nje miksim joformal i gjuhes C++ me nje gjuhe tjeter te folur, na ndihmon te zhvillojme me shpejte strukturen e sakte te programit dhe te shmangim gabimet e zakonshme.
+
+Nuk ekzekutohet ne kompjuter por te jep mundesine t'a mendosh dhe t'a projektosh nje program para se t'a shkruash.
+
+### Struktura switch
+
+Struktura `switch` eshte nje menyre tjeter per te zgjedhur nga disa opsione.
+
+Ne `switch` ne fillim vleresohet instruksioni i pare.
+
+Vlera e instruksionit vendos se cili rezultat do te shfaqet.
+
+Ndonjehere instruksioni/shprehja quhet **perzgjedhja**.
+
+Ne strukturen switch nje instruksion mund te kete nje ose me shume etiketa `case`.
+
+Nuk ju nevojiten kllapa per te mbledhur nje grup instruksionesh ne nje instruksion te vetem.
+
+Kur nje vlere `case` perputhet me kushtin, te gjithe kushtet e tjera vazhdojne te ekzekutohen deri ne momentin qe vendoset nje instruksion `break`.
+
+Mund ta vendosni instruksionin `break` ne fund te cdo instruksione ose ne fund te te gjithe instruksioneve.
+
+`switch`, `case`, `break` dhe `default` jane fjale te rezervuara.
+
+```cpp
+switch (expression)
+{
+    case constant1:
+        statement;
+        break;
+    case constant2:
+        statement;
+        break;
+    // ...
+    // ...
+    // ...
+    default:
+        statement;
+}
+```
+
+### Perfundimi i nje programi me ane te funksionit assert
+
+Disa lloje gabimesh jane shume te veshtira per t'u gjetur (pjestimi me 0).
+
+Funksioni `assert` sherben per te ndaluar programin kur ndodhin gabime te ketilla.
+
+```cpp
+#include <cassert>
+
+int main(){
+    int x = 0;
+    assert(x != 0);
+    return 0;
+}
+```
+
+Nese expression vleresohet si `true` atehere ekzekutohet instruksione i radhes.
+
+Nese expression vleresohet si `false` programi perfundon dhe tregon se ku ka ndodhur gabimi ne program.
+
+`assert` perdoret per te zbatuar kufizime ne programim gjate ndertimit te nje programi.
+
+Pasi te keni testuar programin, hiqni instruksionin `assert`.
+
+Direktiva e preprocessor-it `#define NDEBUG` duhet te vendoset para direktives `#include <cassert>` per te caktivizuar funksionin `assert`.
+
+### Permbledhje (Leksioni 4)
+
+- Strukturat e kontrollit ndryshojne rrjedhen normale te kontrollit.
+- Strukturat e kontrollit me te perdorura jane strukturat kushtezuese dhe strukturat ciklike.
+- Operatoret relacionale jane: `==`, `!=`, `>`, `<`, `>=`, `<=`.
+- Shprehjet logjike vleresohen si 1, e vertete ose 0, e gabuar.
+- Operatoret Logjik jane: `!`, `&&`, `||`
+- Strukturat kushtezuese mund te jene me nje ose me dy dege.
+- Nje strukture kushtezuese brenda nje strukture tjeter formon nje strukture kushtezuese te nderthurur.
+- Shprehja brenda nje `if` apo nje `if`...`else` eshte zakonisht nje shprehje logjike.
+- `else` nuk qendron asnjehere vetem ne nje instruksion ne C++. Cdo `else` ka nje `if`.
+- Nje bashkesi instruksiones te mbylluar me kllapat gjarperushe quhet ndryshe nje bllok instruksionesh.
+- Perdorimi i operatorit te vleredhenies ne vend te operatorit te barazise krijon **problem semantik**.
+- Ekzekutimi i struktures `switch` permban shume rruge.
+- Ekzekutimi i komandes `break` perfundon/mbyll nje komand switch.
+- Perdorimi i `assert` perfundon programin nese has ne gabime qe jane te veshtira per tu gjetur.
