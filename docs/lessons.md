@@ -265,7 +265,7 @@ Kemi dy forma te vleredhenies te qe jane:
 - Operatore te thjeshte: `+`, `-`, `*`, `/`, `%`.
 - Operatore te perbere (compound): `+=`, `-=`, `*=`, `/=`, `%=`.
 
-### Permbledhje
+### Permbledhje (Leksioni 2)
 
 - Nje program ne C++ eshte nje bashkesi funksionesh, ku funksioni kryesor eshte funksioni **main**.
 - **Identifikatoret** perbehen nga shkronja, numra dhe nenvija dhe fillojne gjithmone me shkronje ose nenvije.
@@ -525,7 +525,7 @@ Leximi dhe Shkrimi ne skedare eshte nje **proces me pese hapa:**
 4. Perdorni variablat e skedarit stream me `>>` , `<<` apo funksione te tjera input/output.
 5. Mbyllni skedaret.
 
-### Permbledhje
+### Permbledhje (Leksioni 3)
 
 - **Rrjedha:** Sekuence e pafundme karakteresh nga burimi ne destinacion.
 - **Rrjedhe Hyrese:** nga burimi ne kompjuter.
@@ -565,3 +565,181 @@ Shprehjet qe perdorin **operatoret relacionale** vleresohen gjithmone si `true` 
 | `>`      | me e madhe se                 |
 | `<`      | me e vogel se                 |
 | `>=`     | me e madhe ose e barabarte me |
+
+### Krahasimi i karaktereve
+
+Ne perdorimin e **Operatoreve Relacional** ne nje shprehje me vlerat char rezultati varet nga sekuenca e renditjes (ASCII) e karaktereve.
+
+### Strukturat kushtezuese me nje dege
+
+**Sintaksa** e struktures kushtezuese me nje dege eshte:
+
+```cpp
+if (shprehja)
+    instruksioni;
+```
+
+Instruksioni brenda struktures kushtezuese do te ekzekutohet nese vlera e shprehjes eshte `true` ne te kundert programi shkon tek instruksioni pasardhes.
+
+**shprehje** gjithashtu mund te quhet dhe **vendim-marresi**.
+
+### Strukturat kushtezuese me dy dege
+
+**Sintaksa** e struktures kushtezuese me dy dege eshte:
+
+```cpp
+if(shprehja)
+    instruksioni1;
+else
+    instruksioni2;
+```
+
+Struktura kushtezuese me dy dege do te ekzekutoje instruksionin e pare nese eshte true ne te kundert do te ekzekutoje instruksionin e dyte.
+
+### Lloji i te Dhenave int dhe Shprehjet Logjike
+
+Versionet e meparshme te C++ nuk i perfshinin llojet e te dhenave built-in qe kishin vlera logjike **Boolean**.
+
+Shprehjet logjike vleresohen me 1 ose 0, vlera e shprehjeve logjike ruhej ne variablin e tipit te te dhenave int.
+
+Mund te perdorim tipin e te dhenave `int` per te manipuluar shprehjet logjike **Boolean**.
+
+### Lloji i te Dhenave bool dhe Shprehjet Logjike
+
+Tipi i te denave `bool` ka vlera logjike `true` dhe `false`.
+
+`bool`, `true` dhe `false` jane fjale kyce te C++ (ku true ka vleren 1 dhe false 0).
+
+### Operatoret Logjike dhe Shprehjet Logjike
+
+Operatoret Logjike na mundesojne kombinimin e shprehjeve Logjike, pra sherbejne per ndertimin e kushteve komplekse.
+
+Tabela e Operatoreve Logjike:
+
+| Operator       | Pershkrimi        |
+| -------------- | ----------------- |
+| `!` (Unar)     | Operatori **NOT** |
+| `&&` (Binar)   | Operatori **AND** |
+| `\|\|` (Binar) | Operatori **OR**  |
+
+### Rendi i Perparesise
+
+- **Operatoret Relacionale** dhe **Operatoret Logjike** vleresohen nga e majta ne te djathte.
+
+- Parantezat mund te ndryshojne rendin e perparesise.
+
+Me poshte jepet tabela e perparesise se operatoreve te analizuar deri ne kete leksion:
+
+| Operatori    | Rendi i Perparesise |
+| ------------ | ------------------- |
+| !, +, -      | E para              |
+| ()           | E dyta              |
+| \*, /, %     | E treta             |
+| +, -         | E katerta           |
+| <, <=, >, >= | E pesta             |
+| ==, !=       | E gjashta           |
+| &&           | E shtata            |
+| \|\|         | E tetta             |
+| =            | E fundit            |
+
+Ne baze te instruksioneve te meposhtme analizojme vlerat e shprehjeve logjike:
+
+```cpp
+bool found = true;
+int age = 20;
+double hourse = 45.30;
+double overTime = 15.00;
+int count = 20;
+char ch = 'A';
+```
+
+| Shprehja/Instruksioni        | Vlera/Kuptimi        |
+| ---------------------------- | -------------------- |
+| !found                       | E barabarte me false |
+| hour > 40.00                 | E barabarte me true  |
+| !found && (age >= 18)        | E barabarte me false |
+| !(found && (age >=18))       | E barabarte me false |
+| hours + overTime <= 70.00    | E barabarte me true  |
+| count >= 0) && (count <= 100 | E barabarte me true  |
+| ch <= 'A' && ch <= 'Z'       | E barabarte me true  |
+
+### Operatoret Relacional dhe Lloji i te dhenave string
+
+- Operatoret Relacional mund te perdoren edhe me variablat te llojit `string`.
+  Stringjet krahasohen karakter pas karakteri, duke filluar nga karakteri i pare.
+  Krahasimi vazhdon deri ne nje mosperputhje karakteresh ose deri kur te gjithe karakteret kane rezultuar te barabarte (te njejte).
+  Nese krahasohen dy stringje me gjatesi te ndryshme dhe krahasimi ndalon ne karkaterin e fundit te stringut me te shkurter atehere **stringu me i shkurter eshte me i vogel se stringu me i gjate**.
+
+- Ne baze te instruksioneve te meposhtme le te analizojme vlerat e shprehjeve logjike:
+
+```cpp
+string str1 = "Hello";
+string str2 = "Hi";
+string str3 = "Air";
+string str4 = "Bill";
+string str5 = "Big";
+```
+
+| Shprehja/Instruksioni | Vlera/Kuptimi                                      |
+| --------------------- | -------------------------------------------------- |
+| str1 < str2           | E barabarte me true                                |
+| str1 > "Hen"          | E barabarte me false                               |
+| str3 < "An"           | E barabarte me true                                |
+| str1 == "hello"       | E barabarte me false                               |
+| str3 <= str4          | E barabarte me true                                |
+| str2 > str4           | E barabarte me true                                |
+| str4 >= "Billy"       | E barabarte me false ("Bill " eshte me i shkurter) |
+
+### Blloqet e instruksioneve
+
+Nje bllok instruksionesh ka kete forme:
+
+```cpp
+instriksioni1;
+instruksioni2;
+// ...
+// ...
+// ...
+instruksioni_n
+```
+
+Nje bllok instruksionesh funksionon si nje instruksion i vetem.
+
+### Strukturat Kushtezuese te Nderthurura
+
+Kur nje strukture kontrolli gjendet brenda nje strukture tjeter quhet **strukture kontrolli e nderthurur**.
+
+Kur nje strukture kushtezuese gjendet brenda nje strukture tjeter, quhet **strukture kusthezuese e nderthurur**.
+
+`else` shoqerohet me `if` me te afert te pashoqeruar me `else`.
+
+```cpp
+if(score >= 90)
+    cout << "The grade is A." << endl;
+else if (score >= 80)
+    cout << "The grade is B." << endl;
+else if (score >= 70)
+    cout << "The grade is C." << endl;
+else if (score >= 60)
+    cout << "The grade is D." << endl;
+else
+    cout << "The grade is F." << endl;
+```
+
+### Vleresimi i Qarkut te Shkurter
+
+Vleresimi i qarkut te shkurter (Short-circuit evaluation): Vleresimi i nje shprehje logjike ndalon sapo gjendet vlera e kesaj shprehje, pa qene e ndevojshme te vlersohen te gjitha nenshprehjet.
+
+### Krahasimi i numrave Floating-Point per Barazine
+
+Krahasimi i numrave floating-point per barazi, mund te mos kryhet ashtu sic do pritej:
+
+```cpp
+3.0/7.0 + 2.0/7.0 + 2.0/7.0 = 0.99999999999999989
+```
+
+Nje zhgjedhje eshte kontrolli per nje vlere tolerance si:
+
+```cpp
+if fabs (x-y) < 0.000001
+```
