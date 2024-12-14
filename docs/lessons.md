@@ -908,3 +908,224 @@ Direktiva e preprocessor-it `#define NDEBUG` duhet te vendoset para direktives `
 - Ekzekutimi i struktures `switch` permban shume rruge.
 - Ekzekutimi i komandes `break` perfundon/mbyll nje komand switch.
 - Perdorimi i `assert` perfundon programin nese has ne gabime qe jane te veshtira per tu gjetur.
+
+## Leksioni 5
+
+Strukturat ciklike
+
+### Pse eshte i nevojshem repeticioni/perseritja?
+
+Perseritja e instruksioneve mundeson perdorimin eficent te variablave.
+
+Mundeson futjen, shtimin, dhe gjetjen e mesatares se disa numrave duke perdorur nje numer te limituar variablash.
+
+Marim shembull kodin qe llogarit mesataren e kalorive qe digjen gjate dites duke kryer ushtrime.
+
+- **Metoda 1:** Deklaroni nje variabel per secilen dite dhe jepni vleren e kalorive te djegura per cdo dite, deklaroni edhe nje variabel per gjithe javen, me pas pjestoni totalin me 6 per te gjetur mesataren.
+
+- **Metoda 2:** Krijoni nje cikel qe lexon nje numer ne variablin e deklaruar dhe ja shton kete numer variablit qe permban shumen e numrave.
+
+### Struktura ciklike while
+
+Struktura ciklike `while` eshte nje nder tre strukturat ciklike ne C++.
+
+```cpp
+while (expression){
+    statement;
+}
+```
+
+- Kushti (expression) eshte zakonisht nje shprehje logjike qe nxjerr perfundimin apo pergjigjen logjike.
+- Instruksioni (statement) eshte trupi i struktures ciklike.
+- Instruksioni (statement) mund te jete i thjeshte ose i perbere.
+
+Shprehja (expression) gjeneron vleren logjike qe duhet te plotesohet per ekzekutimin e instruksioneve te struktures ciklike.
+
+Instruksionet vazhdojne te ekzekutohen deri ne momentin qe kushti nuk eshte me i vertete.
+
+Ne nje cikel te pafundem vazhdon te ekzekutohet pambarimisht.
+
+### Struktura Ciklike while e kontrolluar nga numeruesi (Counter-Controlled while Loop)
+
+Nese dihet ose mund te percaktohet se sa here duhet te ekzekutohet nje instruksion ateher perdoret nje strukture ciklike while e kontrolluar nga numeruesi.
+
+```cpp
+int i = 0;
+
+while (i < 10){
+    cout << i << endl;
+    i++;
+}
+
+cout << endl;
+```
+
+### Struktura Ciklike while e kontrolluar nga Rojtari (Sentinel-Controlled while Loop)
+
+Nje variabel rojtar (sentinel) testohet brenda kushtit.
+Struktura ciklike perfundon ateher kur haset vlera rojtare
+
+```cpp
+cin >> variable;
+
+while (variable != sentinel){
+    statement;
+    cin >> variable;
+}
+
+```
+
+### Struktura Ciklike while te Kontrolluara nga nje Vlere Flamurtare (Flag-Controlled while Loop)
+
+Strukturat ciklike te kontrolluara nga nje vlere flamurtare perdorin nje variabel logjik per te kontrolluar ciklin.
+
+```cpp
+bool done = false;
+
+while (!done){
+    statement;
+    done = true;
+}
+```
+
+### Struktura Ciklike while te Kontrolluara nga Fundi i Skedarit (EOF-Controlled while Loop)
+
+Struktura Ciklike te kontrolluara nga fundi i skedarit eshte nje zgjedhje e mire, kur eshte e veshtire per te zgjedhur nje vlere Rojtare.
+
+Vlera logjike e kthyer nga cin mund te percaktoje nese ka me hyrje apo jo.
+
+```cpp
+int num = 0;
+int num;
+
+cin >> num;
+
+while(cin){
+    sum = sum + num;
+    cin >> num;
+}
+
+cout << "The sum is: " << sum << endl;
+```
+
+### Funksioni eof (End-of-File)
+
+Funksioni `eof` mund te percaktoje statusin e fundit te skedarit.
+
+`eof` eshte nje anetar i tipit te te dhenave `istream`.
+
+```cpp
+cin.eof();
+```
+
+### Me shume per Shprehjet ne Deklaratat while
+
+Shprehja ne nje instruksion `while` mund te jete shprehje komplekse.
+
+```cpp
+while ((noOfGuesses < 5) && (!isGuessed)){
+
+}
+```
+
+### Shembull Programimi: Numrat Fibonacci
+
+Numrat Fibonacci jane nje seri numrash ku cdo numer eshte shuma e dy numrave te meparshem.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n, first = 0, second = 1, next;
+
+    cout << "Fusni nje numer: ";
+    cin >> n;
+
+    cout << "Numrat Fibonacci: ";
+
+    for (int i = 0; i < n; i++){
+        if (i <= 1)
+            next = i;
+        else {
+            next = first + second;
+            first = second;
+            second = next;
+        }
+        cout << next << " ";
+    }
+
+    cout << endl;
+
+    return 0;
+}
+```
+
+### Struktura Ciklike for
+
+Struktura ciklike `for` quhet nje cikel `for` i numeruar apo i indeksuar.
+
+```cpp
+for(initial expression; test expression; update expression){
+    statement;
+}
+```
+
+### Struktura Ciklike do...while
+
+Sintaksa e struktures ciklike do...while
+
+```cpp
+do{
+    statement;
+}while(expression);
+```
+
+Fillimisht ekzekutohet statement, me pas vleresohet expression.
+
+Statement (instruksioni) mund te jete i thjeshte ose i perbere.
+
+Cikli perseritet gjithmone te pakten nje here.
+
+Vini re se strukturat ciklike `while` dhe `for` jane me **preTest** fillimisht testohen e me pas ekzekutohen instruksionet ne trupin e struktures.
+Ndersa strukturat ciklike `do...while` jane **postTest** fillimisht ekzekutohen instruksionet ne trupin e struktures dhe me pas testohet kushti.
+
+### Zgjedhja e struktures ciklike te duhur
+
+Nese mund te percaktoni paraprakisht numrin e perseritjeve te nevojshme, cikli `for` eshte zgjedhja e duhur.
+
+Nese nuk e dini dhe nuk mund ta percaktoni numrin e perseritjeve te nevojshme dhe nese numri i perseritjeve mund te jete dhe zero, perdorni ciklin `while`.
+
+Nese nuk e dini dhe nuk mund ta percaktoni paraprakisht numrin e perseritjeve te nevojshme dhe nese numri i perseritjeve eshte te pakte nje perdorni `do...while`.
+
+### Instruksionet break dhe continue
+
+Komandat `break` dhe `continue` ndryshojne rrjedhen e strukturave te kontrollit.
+
+Komanda `break` perdoret per te dale me heret nga nje strukture ciklike dhe per te kapercyer pjesen e mbetur.
+
+Pas ekzekutimit te `break` programi vazhdon me instruksionin e pare pas struktures se kontrollit.
+
+Nje instruksion `break` ne nje cikel mund te eleminoje perdorimin e disa variablave Flamurtare te caktuara.
+
+### Strukturat e Nderthurura te kontrollit
+
+```cpp
+for (int i = 0; i < 5; i++){
+    for (int j = 0; j < 5; j++){
+        cout << "*";
+    }
+    cout << endl;
+}
+```
+
+### Permbledhje (Leksioni 5)
+
+- C++ ka tre struktura Ciklike: `while`, `for`, dhe `do...while`.
+- `while`, `for`, dhe `do...while` jane fjale te rezervuara.
+- Ciklet `while` dhe `for` jane **preTest** dhe cikli `do...while` eshte **postTest**.
+- `do...while` perseritet gjithmone te pakten nje here.
+- Nje strukture ciklike `while` mund te jete: `counter controlled`, `sentinel controlled`, `flag controlled`, ose `EOF controlled`.
+- Struktura ciklike `for` thjeshton perdorimin e nje strukture ciklike `while`.
+- Ekzekutimi i nje instruksioni `break` ne trupin e nje cikli e perfundon menjehere ate.
+- Ekzekutimi i nje instruksioni `continue` ne trupin e nje cikli kalon ciklin ne perseritjen e radhes duke anashkaluar instruksionet e struktures ciklike pas instruksionit `continue`.
