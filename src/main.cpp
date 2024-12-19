@@ -1,6 +1,6 @@
-#include "pune_laboratori_nr5.h"
+#include "weird_algorithm.h"
 
 int main() {
-  p5ex18();
+  weird_algorithm();
   return 0;
 }
