@@ -10,8 +10,9 @@ set(CMAKE_CXX_STANDARD 17)
 # Specify include directories
 include_directories(include)
 
-# Add source files
-file(GLOB SOURCES src/*.cpp)
+# Add source files from subdirectories
+file(GLOB_RECURSE SOURCES src/*.cpp)
 
 # Create the executable
 add_executable(output ${SOURCES})
+
