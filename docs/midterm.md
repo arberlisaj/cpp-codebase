@@ -1,12 +1,12 @@
 # Seksioni i Pyetjeve Teorike:
 
-1.  Perfaqesimi dhe perpunimi i te dhenave ne Kompjuter.
+1. Perfaqesimi dhe perpunimi i te dhenave ne Kompjuter.
 
 ```cpp
 // Te dhenat ne kompjuter perfaqesohen ne menyre numerike duke perdorur sistemin binar (0 dhe 1). Te dhenat hyjne nga nje paisje hyrese si tastiera perpunohen ne CPU, ruhen ne RAM dhe shfaqen ne nje paisje dalje si monitori.
 ```
 
-2.  Cfare quajme Program Kompjuterik, Programim, Editor, Kompilator, Linker dhe Kodim.
+2. Cfare quajme Program Kompjuterik, Programim, Editor, Kompilator, Linker dhe Kodim.
 
 ```cpp
 // - Program Kompjuterik: Eshte nje set instruksionesh qe kryejne nje detyre te caktuar.
@@ -17,7 +17,7 @@
 // - Kodim: Procesi i shkruarjes se kodit.
 ```
 
-3.  Rregullat ne deklarimin e identifikatoreve.
+3. Rregullat ne deklarimin e identifikatoreve.
 
 ```cpp
 // - Duhet te jene te ndryshueshem nga fjale kyce te C++.
@@ -43,7 +43,7 @@ int a-b, b-c, c-d;
 
 ```
 
-4.  Llojet e komenteve ne C++ // Komentet me nje rresht, /\* Komentet me shume rreshta \*\.
+4. Llojet e komenteve ne C++ // Komentet me nje rresht, /\* Komentet me shume rreshta \*\.
 
 ```cpp
 // Komenti me nje rresht
@@ -57,26 +57,26 @@ int a-b, b-c, c-d;
 
 ```
 
-5.  Escape Characters.
+5. Escape Characters.
 
-    | Escape Character | Description           |
-    | ---------------- | --------------------- |
-    | `\n`             | New Line              |
-    | `\t`             | Tab                   |
-    | `\a`             | Bell                  |
-    | `\b`             | Backspace             |
-    | `\r`             | Carriage Return       |
-    | `\f`             | Form Feed             |
-    | `\v`             | Vertical Tab          |
-    | `\\`             | Backslash             |
-    | `\'`             | Single Quote          |
-    | `\"`             | Double Quote          |
-    | `\?`             | Question Mark         |
-    | `\0`             | Null Character        |
-    | `\nnn`           | Octal Character       |
-    | `\xhh`           | Hexadecimal Character |
+   | Escape Character | Description           |
+   | ---------------- | --------------------- |
+   | `\n`             | New Line              |
+   | `\t`             | Tab                   |
+   | `\a`             | Bell                  |
+   | `\b`             | Backspace             |
+   | `\r`             | Carriage Return       |
+   | `\f`             | Form Feed             |
+   | `\v`             | Vertical Tab          |
+   | `\\`             | Backslash             |
+   | `\'`             | Single Quote          |
+   | `\"`             | Double Quote          |
+   | `\?`             | Question Mark         |
+   | `\0`             | Null Character        |
+   | `\nnn`           | Octal Character       |
+   | `\xhh`           | Hexadecimal Character |
 
-6.  Skedaret header qe mbajne manipulatoret dhe pa parametra.
+6. Skedaret header qe mbajne manipulatoret dhe pa parametra.
 
 ```cpp
 #include <iostream> // Permban manipulatoret dhe objektet e cin dhe cout.
@@ -93,7 +93,7 @@ int a-b, b-c, c-d;
 #include <cfloat>   // Permban konstantet e cilat ndikojne ne manipulimin e numrave me presicion te kufizuar.
 ```
 
-7.  Llojet e Operatoreve ne C++.
+7. Llojet e Operatoreve ne C++.
 
 | Lloji i Operatoreve | Shembulli                        | Pershkrimi                                     |
 | ------------------- | -------------------------------- | ---------------------------------------------- |
@@ -109,7 +109,7 @@ int a-b, b-c, c-d;
 | sizeof              | `sizeof`                         | Kthen madhesine e nje tipi te te dhenave.      |
 | Cast                | `(tipi)`                         | Kthen nje tip te te dhenave ne nje tip tjeter. |
 
-9.  Tabelat e vertetesise se operatoreve logjik.
+9. Tabelat e vertetesise se operatoreve logjik.
 
 | A   | B   | A && B | A \|\| B | !A  |
 | --- | --- | ------ | -------- | --- |
@@ -168,12 +168,15 @@ int a = 2, b = 3, c = 4;
 b = a++;
 c = --b;
 a = c*b;
+
+// Result: a = 1
 ```
 
 13. Vlera e shprehjes 17/2%3\*5/2.0 eshte:
 
 ```cpp
-// ...
+
+// Result: 5
 ```
 
 14. Sa do te jete vlera perfundimtare e identifikatorit "c" pas ekzekutimit te instruksioneve te meposhtme:
@@ -181,7 +184,8 @@ a = c*b;
 ```cpp
 int a = 4, c =5;
 c = (a<2) ? (2-a) : (5/a);
-cout << c;
+
+// Result: c = 1
 ```
 
 15. Sa do te jete vlera perfundimtare e identifikatorit "c" pas ekzekutimit te instruksioneve te meposhtme:
@@ -191,7 +195,8 @@ int a = 2, c = 3;
 if(a>3)
  c+=a;
 c++;
-cout << c;
+
+// Result: c = 4
 ```
 
 16. Bazuar ne instruksionet e meposhtme, cilat jane vlerat perfundimtare te variablave te plote **i** dhe **n**?
@@ -200,16 +205,18 @@ cout << c;
 n = 2;
 i = 3;
 i = n++;
+
+// Result: i = 2, n = 3
 ```
 
-17. Gjeni vlerat e shprehjet e meposhtme logjike, nese vlerat fillestare te variablave jane: a = 2, b = 3 dhe d = 5;
+17. Gjeni vlerat e shprehjet e meposhtme logjike, nese vlerat fillestare te variablave jane: a = 2, b = 3, c = 4 dhe d = 5;
 
 ```cpp
-c == a+b || c == d
-a != 7 && c >= 6 || a+c <= 20
-!(b <= 12) && a % 2 == 0
-a<c/b || d%a==a
-!(a >5) || c < a+b
+c == a+b || c == d  // 0
+a != 7 && c >= 6 || a+c <= 20 // 1
+!(b <= 12) && a % 2 == 0 // 0
+a < c / b || d % a == a // 0
+!(a > 5) || c < a + b // 1
 ```
 
 18. Nese vlera fillestare e "x" eshte **2**, sa do te jene vlerat e variablave "a" dhe "b" pas ekzekutimit te kodit te meposhtem?
@@ -220,6 +227,8 @@ if(x < 2.1){
     a *= x;
     b -= 1;
 }
+
+// Result: a = 0, b = -1
 ```
 
 19. Nese "y" ka vleren fillestare **3**, sa do te jete vlera e variablit "y" pas ekzekutimit te kodit te meposhtem?
@@ -230,11 +239,13 @@ if(y < 2)
 else
     y /= 3;
 y++;
+
+// Result y = 2
 ```
 
 20. Sa eshte vlera e identifikatorit "c" pas ekzekutimit te kodit te meposhtem
 
-```
+```cpp
 switch(x){
   case 1: c = 'A'; break;
   case 2: c = 'B'; break;
@@ -242,6 +253,8 @@ switch(x){
   case 4: c = 'D'; break;
   default: c = 'F';
 }
+
+// Result: c = 'F'
 ```
 
 21. Sa eshte vlera perfundimtare e variablit "c" pas ekzekutimit te instruksioneve te meposhtme?
@@ -249,25 +262,28 @@ switch(x){
 ```cpp
 int a = 2, b = 3, c;
 c = ++b - a--;
+
+// Result: c = 2
 ```
 
 22. Supozoni se x eshte nje ndryshore/variabel **int** atehere vlera e shprehjeve logjike te meposhtme jane:
 
 ```cpp
-(x > 0) || (x <= 0)
-(x >= 0) || (x == 0)
-(x > 0) &&  (x <= 0)
-(x > 0) && (x == 0)
-
+(x > 0) || (x <= 0) // 1
+(x >= 0) || (x == 0) // 1
+(x > 0) &&  (x <= 0) // 0
+(x > 0) && (x == 0) // 0
 ```
 
-23. Cila eshte vlera e e pare dhe e fundit e identifikatorit "i" qe do te shfaqet nga ekzekutimi i kodit te meposhtem?
+23. Cila eshte vlera e pare dhe e fundit e identifikatorit "i" qe do te shfaqet nga ekzekutimi i kodit te meposhtem?
 
 ```cpp
 n = 50;
 for(int i=n/3; i<n/2; i=i+2){
  //...
 }
+
+// Result: i = 16, i = 24
 ```
 
 24. Bazuar ne kodin e meposhtem sa here rritet variabli shuma. Me fjale te tjera sa here ekzekutohet instruksioni ne rreshtin X?
@@ -277,4 +293,6 @@ shuma = 0;
 for(int i = 1; i <= 3; i++)
     for(int j = 1; j<=2; j++)
         shuma++; // Rreshti X
+
+// Result: 3x2 = 6 here
 ```
