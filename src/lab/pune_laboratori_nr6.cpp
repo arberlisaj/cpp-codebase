@@ -50,9 +50,7 @@ int p6ex01() {
 
     cout << "\nGjetja e notes maksimale dhe minimale\n";
     for (int i = 0; i < n; i++) {
-      if (vlera_max < notat[i])
-
-      {
+      if (vlera_max < notat[i]) {
         vlera_max = notat[i];
         indeksi_max = i;
       }
@@ -62,11 +60,11 @@ int p6ex01() {
         indeksi_min = i;
       }
     }
-    cout << "Nota maksimale = " << vlera_max << endl;
-    cout << "Pozicioni i notes maksimale = " << indeksi_max << endl;
 
-    cout << "Nota minimale = " << vlera_min << endl;
-    cout << "Pozicioni i notes minimale = " << indeksi_min << endl;
+    cout << "Nota maksimale = " << vlera_max
+         << "Pozicioni i notes maksimale = " << indeksi_max << endl
+         << "Nota minimale = " << vlera_min << endl
+         << "Pozicioni i notes minimale = " << indeksi_min << endl;
 
     // Gjetja e nje vlere specifike ne varg
     int nota_kerkuar;
@@ -95,8 +93,11 @@ int p6ex01() {
   } else {
     cout << "Madhesia e vargut nuk mund te jete negative\n";
   }
+
   return 0;
 }
+
+// ---------------------------------------------------------------
 
 /*
  * Lab_06_Ushtrimi_2:
@@ -109,7 +110,6 @@ int p6ex01() {
  */
 
 int p6ex02() {
-
   int rreshta, kolona;
 
   // if(rreshta>0 && kolona>0)
@@ -170,17 +170,47 @@ int p6ex02() {
     shuma_diag_2 += notat[i][j];
     j--;
   }
-
-  cout << "Shuma e Diagonales se Pare: " << shuma_diag_1 << endl;
-  cout << "Shuma e Diagonales se Dyte: " << shuma_diag_2 << endl;
+  cout << "Shuma e Diagonales se Pare: " << shuma_diag_1 << endl
+       << "Shuma e Diagonales se Dyte: " << shuma_diag_2 << endl;
 
   return 0;
 }
+
+// ---------------------------------------------------------------
+
+/*
+ * Lab_06_Ushtrimi_3:
+ * Te formohet vektori a ne menyre qe secili element te jete i barabarte
+ * me katrorin e indeksit te tij
+ */
 
 int p6ex03() {
-  cout << "p6ex03" << endl;
+  int n;
+  cout << "Fusni numrin e elementeve te vektorit: \n";
+  cin >> n;
+
+  if (n > 0) {
+    int vektori[n];
+
+    // Krijimi i vektorit
+    for (int i = 0; i < n; i++) {
+      vektori[i] = i * i;
+    }
+
+    // Shfaqja e vlerave te elementeve te vektorit
+    cout << "Shfaqja e " << n << " vlerave te elementeve te vektorit\n";
+    for (int i = 0; i < n; i++) {
+      cout << vektori[i] << " ";
+    }
+    cout << endl;
+  } else {
+    cout << "Madhesia e vektorit nuk mund te jete negative\n";
+  }
+
   return 0;
 }
+
+// ---------------------------------------------------------------
 
 int p6ex04() {
   cout << "p6ex04" << endl;
