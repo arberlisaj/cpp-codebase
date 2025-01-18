@@ -212,8 +212,37 @@ int p6ex03() {
 
 // ---------------------------------------------------------------
 
+/*
+ * Lab_06_Ushtrimi_4:
+ * Të formohet vektori a me pesë numrat e parë tek dhe vektori b me pesë numrat
+ * e parë çift.
+ */
+
 int p6ex04() {
-  cout << "p6ex04" << endl;
+  int n = 5;
+  int vektori_a[n], vektori_b[n];
+
+  for (int i = 0; i < 5; i++) {
+    vektori_a[i] = 2 * i + 1;
+    vektori_b[i] = 2 * (i + 1);
+  }
+
+  // Shfaqja e vlerave te elementeve te vektorit A
+  cout << "Shfaqja e " << n << " vlerave te elementeve te vektorit A\n";
+  for (int i = 0; i < n; i++) {
+    cout << vektori_a[i] << " ";
+  }
+
+  cout << endl;
+
+  // Shfaqja e vlerave te elementeve te vektorit B
+  cout << "Shfaqja e " << n << " vlerave te elementeve te vektorit B\n";
+  for (int i = 0; i < n; i++) {
+    cout << vektori_b[i] << " ";
+  }
+
+  cout << endl;
+
   return 0;
 }
 
