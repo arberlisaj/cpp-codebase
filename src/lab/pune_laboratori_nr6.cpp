@@ -1,4 +1,7 @@
+#include <cmath>
+#include <cstdlib>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -44,14 +47,14 @@ int p6ex01() {
     cout << "Mesatarja = " << mesatarja << endl;
 
     // Gjetja e vleres maksimale/minimale te vargut
-    int vlera_min, vlera_max, indeksi_min, indeksi_max;
-    vlera_min = vlera_max = notat[0];
+    int vlera_min, elementiVogel, indeksi_min, indeksi_max;
+    vlera_min = elementiVogel = notat[0];
     indeksi_min = indeksi_max = 0;
 
     cout << "\nGjetja e notes maksimale dhe minimale\n";
     for (int i = 0; i < n; i++) {
-      if (vlera_max < notat[i]) {
-        vlera_max = notat[i];
+      if (elementiVogel < notat[i]) {
+        elementiVogel = notat[i];
         indeksi_max = i;
       }
 
@@ -61,7 +64,7 @@ int p6ex01() {
       }
     }
 
-    cout << "Nota maksimale = " << vlera_max
+    cout << "Nota maksimale = " << elementiVogel
          << "Pozicioni i notes maksimale = " << indeksi_max << endl
          << "Nota minimale = " << vlera_min << endl
          << "Pozicioni i notes minimale = " << indeksi_min << endl;
@@ -235,7 +238,6 @@ int p6ex04() {
 
   cout << endl;
 
-  // Shfaqja e vlerave te elementeve te vektorit B
   cout << "Shfaqja e " << n << " vlerave te elementeve te vektorit B\n";
   for (int i = 0; i < n; i++) {
     cout << vektori_b[i] << " ";
@@ -246,8 +248,144 @@ int p6ex04() {
   return 0;
 }
 
+// ---------------------------------------------------------------
+
+// Radhit vektorin ne rendin rrites
+void bubbleSort(int arr[], int n) {
+  for (int i = 0; i < n - 1; i++) {
+    for (int j = 0; j < n - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        int temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+}
+
 int p6ex05() {
-  cout << "p6ex05" << endl;
+
+  /*
+   * Lab_06_Ushtrimi_5:
+   * 1.Te formohet vektori a me lexim te n numrave nga tastiera.
+   * 2.Te gjendet shuma e elementeve te tij.
+   * 3.Te shfaqet elementi me i vogel i vektorit a dhe indeksi i tij.
+   * 4.Te shfaqet elementi me i madh i vektorit dhe indeksi i tij.
+   * 5.Te llogaritet prodhimi i elementeve te vektorit a.
+   * 6.Te llogaritet vlera absolute me e vogel e elementeve te vektorit a dhe
+   * indeksi i saj.
+   * 7.Te formohet vektori i ri b nga elementet me indeks tek te vektorit a duke
+   * mbledhur vlerat e elementeve me vleren e indeksit perkates.
+   * 8.Te llogaritet shuma e katroreve te elementeve negative dhe shuma e kubeve
+   * te elementeve pozitive te vektorit a.
+   * 9.Te rradhiten vlerat e elementeve te vektorit a sipas rendit rrites.
+   */
+
+  int n;
+  cout << "Fusni numrin e elementeve te vektorit: \n";
+  cin >> n;
+
+  int vektori_a[n];
+  vector<int> vektori_b;
+
+  int shuma = 0, prodhimi = 1;
+  int shumaKatroreveNegativ = 0;
+  int shumaKubevePozitiv = 0;
+
+  int elementiVogel, elementiVogelIndex;
+  int elementiMadh, elementiMadhIndex;
+
+  int vleraAbsoluteMeEVogel, vleraAbsoluteMeEVogelIndex;
+
+  cout << "Fusni elementin 0 te vektorit : \n";
+  cin >> vektori_a[0];
+
+  shuma = vektori_a[0];
+  prodhimi = vektori_a[0];
+
+  elementiVogel = vektori_a[0];
+  elementiVogelIndex = 0;
+
+  elementiMadh = vektori_a[0];
+  elementiMadhIndex = 0;
+
+  vleraAbsoluteMeEVogel = abs(vektori_a[0]);
+  vleraAbsoluteMeEVogelIndex = 0;
+
+  if (vektori_a[0] < 0)
+    shumaKatroreveNegativ += pow(vektori_a[0], 2);
+  if (vektori_a[0] > 0)
+    shumaKubevePozitiv += pow(vektori_a[0], 3);
+
+  for (int i = 1; i < n; i++) {
+    cout << "Fusni elementin " << i << " te vektorit : \n";
+    cin >> vektori_a[i];
+
+    // Llogaritja e shumes dhe prodhimit te elementeve
+    shuma += vektori_a[i];
+    prodhimi *= vektori_a[i];
+
+    // Llogaritja e elementit me te vogel
+    if (vektori_a[i] < elementiVogel) {
+      elementiVogel = vektori_a[i];
+      elementiVogelIndex = i;
+    }
+
+    // Llogaritja e elementit me te madh
+    if (vektori_a[i] > elementiMadh) {
+      elementiMadh = vektori_a[i];
+      elementiMadhIndex = i;
+    }
+
+    // Llogaritja e vleres absolute me te vogel
+    if (abs(vektori_a[i]) < vleraAbsoluteMeEVogel) {
+      vleraAbsoluteMeEVogel = abs(vektori_a[i]);
+      vleraAbsoluteMeEVogelIndex = i;
+    }
+
+    // Formimi i vektorit b
+    if (i % 2 != 0) {
+      vektori_b.push_back(vektori_a[i] + i);
+    }
+
+    // LLogarit shumen e katroreve te elementeve negative dhe shuma e kubeve te
+    // elementeve pozitive.
+    if (vektori_a[i] < 0) {
+      shumaKatroreveNegativ += pow(vektori_a[i], 2);
+    } else if (vektori_a[i] > 0) {
+      shumaKubevePozitiv += pow(vektori_a[i], 3);
+    }
+  }
+
+  cout << "Shuma e elementeve te vektorit a: " << shuma << endl;
+  cout << "Elementi me i vogel i vektorit a: " << elementiVogel << " me indeks "
+       << elementiVogelIndex << endl;
+  cout << "Elementi me i madh i vektorit a: " << elementiMadh << " me indeks "
+       << elementiMadhIndex << endl;
+  cout << "Prodhimi i elementeve te vektorit a: " << prodhimi << endl;
+  cout << "Vlera absolute me e vogel e elementeve te vektorit a: "
+       << vleraAbsoluteMeEVogel << " me indeks " << vleraAbsoluteMeEVogelIndex
+       << endl;
+
+  cout << "Vektori b: ";
+  for (int num : vektori_b) {
+    cout << num << " ";
+  }
+
+  cout << endl;
+
+  cout << "Shuma e katroreve te elementeve negative: " << shumaKatroreveNegativ
+       << endl
+       << "Shuma e kubeve te elementeve pozitive: " << shumaKubevePozitiv
+       << endl;
+
+  // Rradhitja e elementeve te vektorit
+  bubbleSort(vektori_a, n);
+  for (int i = 0; i < n; i++) {
+    cout << vektori_a[i] << " ";
+  }
+  cout << endl;
+
   return 0;
 }
 
