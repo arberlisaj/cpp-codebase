@@ -274,10 +274,80 @@ int p6ex05() {
   return 0;
 }
 
+// ---------------------------------------------------------------
+
+/* Lab_06_Ushtrimi_6:
+ * Jepet matrica M[n][m]
+ * a. Te gjendet shuma e elementeve pozitive dhe produkti i elementeve negative.
+ * b. Te gjendet vlera e elementit me te madh dhe indekset e tij.
+ * c. Te gjendet vlera e elementit me te vogel dhe indekset e tij.
+ * d. Te gjendet shuma e diagonales se pare dhe produkti i diagonales se dyte
+ */
+
 int p6ex06() {
-  cout << "p6ex06" << endl;
+  int n, m;
+  cout << "Fusni numrin e rreshtave te matrices: ";
+  cin >> n;
+  cout << "Fusni numrin e kolonave te matrices: ";
+  cin >> m;
+
+  const int MAX_SIZE = 100;
+  if (n > MAX_SIZE || m > MAX_SIZE) {
+    cout << "Madhesia e matrices eshte shume e madhe!" << endl;
+    return 1;
+  }
+
+  int matrix[MAX_SIZE][MAX_SIZE];
+
+  int shumaPozitiv = 0;
+  int prodhimiNegativ = 1;
+  int elementiMax;
+  int elementiMin;
+  int idxElementiMax[2] = {0, 0};
+  int idxElementiMin[2] = {0, 0};
+
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m; j++) {
+      cout << "Elementi [" << i << "][" << j << "]: ";
+      cin >> matrix[i][j];
+
+      if (i == 0 && j == 0) {
+        elementiMin = matrix[i][j];
+        elementiMax = matrix[i][j];
+      }
+
+      if (matrix[i][j] > elementiMax) {
+        elementiMax = matrix[i][j];
+        idxElementiMax[0] = i;
+        idxElementiMax[1] = j;
+      }
+
+      if (matrix[i][j] < elementiMin) {
+        elementiMin = matrix[i][j];
+        idxElementiMin[0] = i;
+        idxElementiMin[1] = j;
+      }
+
+      if (matrix[i][j] > 0) {
+        shumaPozitiv += matrix[i][j];
+      } else if (matrix[i][j] < 0) {
+        prodhimiNegativ *= matrix[i][j];
+      }
+    }
+  }
+
+  cout << "Shuma e elementeve pozitiv: " << shumaPozitiv << endl;
+  cout << "Prodhimi i elementeve negativ: "
+       << (prodhimiNegativ == 1 ? 0 : prodhimiNegativ) << endl;
+  cout << "Elementi me i madh: " << elementiMax << " me indeks ["
+       << idxElementiMax[0] << "][" << idxElementiMax[1] << "]" << endl;
+  cout << "Elementi me i vogel: " << elementiMin << " me indeks ["
+       << idxElementiMin[0] << "][" << idxElementiMin[1] << "]" << endl;
+
   return 0;
 }
+
+// ---------------------------------------------------------------
 
 int p6ex07() {
   cout << "p6ex07" << endl;
